@@ -84,7 +84,7 @@ author:
   avatar           : "profile.png"
   bio              : "PhD student doing rendering and visualization research"
   location         : "University of California - Davis"
-  employer         : "https://vidi.cs.ucdavis.edu" 
+  employer         : # "https://vidi.cs.ucdavis.edu" 
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=I2hvxPUAAAAJ&hl=en"
   email            :
