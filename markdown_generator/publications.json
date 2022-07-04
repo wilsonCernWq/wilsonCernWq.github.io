@@ -1,0 +1,15 @@
+{
+    "collection": "publications",
+    "data": [
+        {
+            "title": "A Flexible Data Streaming Design for Interactive Visualization of Large-Scale Volume Data",
+            "date": "2022-06-13",
+            "venue": "The Eurographics Symposium on Parallel Graphics and Visualization (EGPGV)",
+            "abstract": "Modern simulations and experiments can produce massive amounts of high-fidelity data that are challenging to transport and visualize interactively. We have designed a data streaming system to support interactive visualization of large volume data. Our streaming system design is unique in its flexibility to support diverse data organizations and its coupling with a highly efficient CPU-based ray-tracing renderer. In this paper, we present our streaming and rendering design and demonstrate the efficacy of our system with progressive rendering of streaming tree-based AMR (TAMR) volume data and radial basis function (RBF) particle volume data. With our system, interactive visualization can be achieved using only a mid-range workstation with a single CPU and a modest quantity of RAM.",
+            "permalink": "egpgv2022-streaming-volume",
+            "link": "https://drive.google.com/file/d/13laOefDThpDUr-nxfpjTVLdTI2tiNpCi/view?usp=sharing",
+            "citation": "Wu, Qi, Michael J. Doyle, and Kwan-Liu Ma. \"A Flexible Data Streaming Design for Interactive Visualization of Large-Scale Volume Data.\" (2022).",
+            "bibtex": "@inproceedings{10.2312:pgv.20221064,\nbooktitle = {Eurographics Symposium on Parallel Graphics and Visualization},\neditor = {Bujack, Roxana and Tierny, Julien and Sadlo, Filip},title = {{A Flexible Data Streaming Design for Interactive Visualization of Large-Scale Volume Data}},\nauthor = {Wu, Qi and Doyle, Michael J. and Ma, Kwan-Liu},\nyear = {2022},\npublisher = {The Eurographics Association},\nISSN = {1727-348X},\nISBN = {978-3-03868-175-5},\nDOI = {10.2312/pgv.20221064}\n}"
+        }
+    ]
+}

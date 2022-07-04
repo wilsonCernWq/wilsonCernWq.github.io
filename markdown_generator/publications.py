@@ -13,8 +13,8 @@
 # The TSV needs to have the following columns: pub_date, title, venue, excerpt, citation, site_url, and paper_url, with a header at the top. 
 # 
 # - `excerpt` and `paper_url` can be blank, but the others must have values. 
-# - `pub_date` must be formatted as YYYY-MM-DD.
-# - `url_slug` will be the descriptive part of the .md file and the permalink URL for the page about the paper. The .md file will be `YYYY-MM-DD-[url_slug].md` and the permalink will be `https://[yourdomain]/publications/YYYY-MM-DD-[url_slug]`
+# - `date` must be formatted as YYYY-MM-DD.
+# - `permalink` will be the descriptive part of the .md file and the permalink URL for the page about the paper. The .md file will be `YYYY-MM-DD-[url_slug].md` and the permalink will be `https://[yourdomain]/publications/YYYY-MM-DD-[url_slug]`
 
 
 # ## Import pandas
@@ -24,6 +24,7 @@
 # In[2]:
 
 import pandas as pd
+import json
 
 
 # ## Import TSV
@@ -34,9 +35,31 @@ import pandas as pd
 
 # In[3]:
 
-publications = pd.read_csv("publications.tsv", sep="\t", header=0)
-publications
+# publications = pd.read_csv("publications.tsv", sep="\t", header=0)
+with open('publications.json') as f:
+    publications_json = json.load(f)
+    assert publications_json["collection"] == "publications"
+    d = {
+        "title": [],
+        "venue": [],
+        "date": [],
+        "excerpt": [],
+        "citation": [],
+        "permalink": [],
+        "link": [],
+        "bibtex": [],
 
+    }
+    for pub in publications_json["data"]:
+        d["title"].append(pub["title"])
+        d["venue"].append(pub["venue"])
+        d["date"].append(pub["date"])
+        d["excerpt"].append(pub["abstract"])
+        d["permalink"].append(pub["permalink"])
+        d["link"].append(pub["link"])
+        d["citation"].append(pub["citation"])
+        d["bibtex"].append(pub["bibtex"])
+    publications = pd.DataFrame(d)
 
 # ## Escape special characters
 # 
@@ -64,9 +87,9 @@ def html_escape(text):
 import os
 for row, item in publications.iterrows():
     
-    md_filename = str(item.pub_date) + "-" + item.url_slug + ".md"
-    html_filename = str(item.pub_date) + "-" + item.url_slug
-    year = item.pub_date[:4]
+    md_filename = item.permalink + ".md"
+    html_filename = item.permalink
+    year = item.date[:4]
     
     ## YAML variables
     
@@ -79,12 +102,12 @@ for row, item in publications.iterrows():
     if len(str(item.excerpt)) > 5:
         md += "\nexcerpt: '" + html_escape(item.excerpt) + "'"
     
-    md += "\ndate: " + str(item.pub_date) 
+    md += "\ndate: " + str(item.date) 
     
     md += "\nvenue: '" + html_escape(item.venue) + "'"
     
-    if len(str(item.paper_url)) > 5:
-        md += "\npaperurl: '" + item.paper_url + "'"
+    if len(str(item.link)) > 5:
+        md += "\npaperurl: '" + item.link + "'"
     
     md += "\ncitation: '" + html_escape(item.citation) + "'"
     
@@ -92,17 +115,21 @@ for row, item in publications.iterrows():
     
     ## Markdown description for individual page
     
-    if len(str(item.paper_url)) > 5:
-        md += "\n\n<a href='" + item.paper_url + "'>Download paper here</a>\n" 
+    if len(str(item.link)) > 5:
+        md += "\n\n<a href='" + item.link + "'>Download paper here</a>\n" 
         
     if len(str(item.excerpt)) > 5:
         md += "\n" + html_escape(item.excerpt) + "\n"
         
     md += "\nRecommended citation: " + item.citation
-    
+    md += "\n\n"
+
+    md += "{% raw %}\n"
+    md += "```\n"
+    md += item.bibtex
+    md += "\n```\n{% endraw %}\n"
+
     md_filename = os.path.basename(md_filename)
        
     with open("../_publications/" + md_filename, 'w') as f:
         f.write(md)
-
-
