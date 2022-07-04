@@ -48,7 +48,7 @@ with open('publications.json') as f:
         "permalink": [],
         "link": [],
         "bibtex": [],
-
+        "authors": []
     }
     for pub in publications_json["data"]:
         d["title"].append(pub["title"])
@@ -59,6 +59,7 @@ with open('publications.json') as f:
         d["link"].append(pub["link"])
         d["citation"].append(pub["citation"])
         d["bibtex"].append(pub["bibtex"])
+        d["authors"].append(pub["authors"])
     publications = pd.DataFrame(d)
 
 # ## Escape special characters
@@ -105,6 +106,8 @@ for row, item in publications.iterrows():
     md += "\ndate: " + str(item.date) 
     
     md += "\nvenue: '" + html_escape(item.venue) + "'"
+
+    md += "\nauthors: '" + html_escape(item.authors) + "'"
     
     if len(str(item.link)) > 5:
         md += "\npaperurl: '" + item.link + "'"
