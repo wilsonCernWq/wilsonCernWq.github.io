@@ -39,10 +39,14 @@ import json
 with open('publications.json') as f:
     publications_json = json.load(f)
     assert publications_json["collection"] == "publications"
+
+    venues = dict(publications_json["venues"])
+
     d = {
         "title": [],
         "venue": [],
         "date": [],
+        "award": [],
         "excerpt": [],
         "citation": [],
         "permalink": [],
@@ -52,7 +56,12 @@ with open('publications.json') as f:
     }
     for pub in publications_json["data"]:
         d["title"].append(pub["title"])
-        d["venue"].append(pub["venue"])
+
+        if pub["venue"][0] == "@":
+            d["venue"].append(venues[pub["venue"][1:]])
+        else:
+            d["venue"].append(pub["venue"])
+
         d["date"].append(pub["date"])
         d["excerpt"].append(pub["abstract"])
         d["permalink"].append(pub["permalink"])
@@ -60,6 +69,10 @@ with open('publications.json') as f:
         d["citation"].append(pub["citation"])
         d["bibtex"].append(pub["bibtex"])
         d["authors"].append(pub["authors"])
+        if "award" in pub:
+            d["award"].append(pub["award"])
+        else:
+            d["award"].append("")
     publications = pd.DataFrame(d)
 
 # ## Escape special characters
@@ -100,16 +113,19 @@ for row, item in publications.iterrows():
     
     md += """\npermalink: /publication/""" + html_filename
     
-    if len(str(item.excerpt)) > 5:
+    if len(str(item.excerpt)) > 0:
         md += "\nexcerpt: '" + html_escape(item.excerpt) + "'"
     
     md += "\ndate: " + str(item.date) 
+
+    if len(str(item.award)) > 0:
+        md += "\naward: '" + html_escape(item.award) + "'"
     
     md += "\nvenue: '" + html_escape(item.venue) + "'"
 
     md += "\nauthors: '" + html_escape(item.authors) + "'"
     
-    if len(str(item.link)) > 5:
+    if len(str(item.link)) > 0:
         md += "\npaperurl: '" + item.link + "'"
     
     md += "\ncitation: '" + html_escape(item.citation) + "'"

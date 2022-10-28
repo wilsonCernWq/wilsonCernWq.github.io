@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Qi Wu / Homepage"
+title                    : "Qi Wu (吴奇) / Homepage"
 title_separator          : "-"
 name                     : &name "Qi Wu"
 description              : &description "personal description"
@@ -81,8 +81,8 @@ analytics:
 author:
   name             : "Qi Wu"
   avatar           : "profile.png"
-  bio              : "PhD student doing rendering and visualization research"
-  location         : "University of California - Davis"
+  bio              : "PhD candidate doing rendering and visualization research"
+  location         : "UC - Davis"
   employer         : # "https://vidi.cs.ucdavis.edu" 
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=I2hvxPUAAAAJ&hl=en"

@@ -1,21 +1,40 @@
 {
     "collection": "publications",
+    "venues": {
+        "VIS": "IEEE Visualization Conference (VIS)",
+        "EGPGV": "The Eurographics Symposium on Parallel Graphics and Visualization (EGPGV)",
+        "LDAV": "IEEE Symposium on Large Data Analysis and Visualization (LDAV)",
+        "EuroVis": "Eurographics Conference on Visualization (EuroVis)",
+        "arxiv": "ArXiv Preprint"
+    },
     "data": [
+        {
+            "title": "Instant Neural Representation for Interactive Volume Rendering",
+            "date": "2022-10-24",
+            "venue": "@arxiv",
+            "authors": "Wu, Qi, David Bauer, Michael J. Doyle, and Kwan-Liu Ma",
+            "abstract": "Neural networks have shown great potential in compressing volume data for visualization. However, due to the high cost of training and inference, such volumetric neural representations have thus far only been applied to offline data processing and non-interactive rendering. In this paper, we demonstrate that by simultaneously leveraging modern GPU tensor cores, a native CUDA neural network framework, and a well-designed rendering algorithm with macro-cell acceleration, we can interactively ray trace volumetric neural representations (10-60fps). Our neural representations are also high-fidelity (PSNR > 30dB) and compact (10-1000x smaller). Additionally, we show that it is possible to fit the entire training step inside a rendering loop and skip the pre-training process completely. To support extreme-scale volume data, we also develop an efficient out-of-core training strategy, which allows our volumetric neural representation training to potentially scale up to terascale using only an NVIDIA RTX 3090 workstation.",
+            "permalink": "arxiv-instant-vnr",
+            "link": "https://drive.google.com/file/d/1IyXgzGw7EpHWAsakZoHsE8aU9RqdjHyg/view?usp=sharing",
+            "citation": "Wu, Qi, David Bauer, Michael J. Doyle, and Kwan-Liu Ma. \"Instant Neural Representation for Interactive Volume Rendering.\" ArXiv Preprint arXiv:2207.11620 (2022).",
+            "bibtex": "@article{wu2022instant,\n title={Instant Neural Representation for Interactive Volume Rendering},\n author={Wu, Qi and Doyle, Michael J and Bauer, David and Ma, Kwan-Liu},\n journal={arXiv preprint arXiv:2207.11620},\n year={2022}\n}"
+        },
         {
             "title": "FoVolNet: Fast Volume Rendering using Foveated Deep Neural Networks",
             "date": "2022-09-26",
-            "venue": "IEEE Visualization Conference (VIS) [Best Paper Honorable Mentions]",
+            "venue": "@VIS",
+            "award": "Best Paper Honorable Mentions",
             "authors": "David Bauer, Qi Wu, and Kwan-Liu Ma",
             "abstract": "Volume data is found in many important scientific and engineering applications. Rendering this data for visualization at high quality and interactive rates for demanding applications such as virtual reality is still not easily achievable even using professional-grade hardware. We introduce FoVolNet—a method to significantly increase the performance of volume data visualization. We develop a cost-effective foveated rendering pipeline that sparsely samples a volume around a focal point and reconstructs the full-frame using a deep neural network. Foveated rendering is a technique that prioritizes rendering computations around the user’s focal point. This approach leverages properties of the human visual system, thereby saving computational resources when rendering data in the periphery of the user’s field of vision. Our reconstruction network combines direct and kernel prediction methods to produce fast, stable, and perceptually convincing output. With a slim design and the use of quantization, our method outperforms state-of-the-art neural reconstruction techniques in both end-to-end frame times and visual quality. We conduct extensive evaluations of the system’s rendering performance, inference speed, and perceptual properties, and we provide comparisons to competing neural image reconstruction techniques. Our test results show that FoVolNet consistently achieves significant time saving over conventional rendering while preserving perceptual quality.",
             "permalink": "vis2022-fovonet",
             "link": "https://drive.google.com/file/d/1-H7rtC_VH88oNp10kKSCacFE3IU2VCjj/view?usp=sharing",
-            "citation": "Bauer, David, Qi Wu, and Kwan-Liu Ma. \"FoVolNet: Fast Volume Rendering Using Foveated Deep Neural Networks.\" IEEE Transactions on Visualization and Computer Graphics (VIS). 2022.",
+            "citation": "Bauer, David, Qi Wu, and Kwan-Liu Ma. \"FoVolNet: Fast Volume Rendering Using Foveated Deep Neural Networks.\" IEEE Transactions on Visualization and Computer Graphics (2022).",
             "bibtex": "@artivle{bauer2022fovolnet,\n author={Bauer, David and Wu, Qi and Ma, Kwan-Liu},\n journal={IEEE Transactions on Visualization and Computer Graphics}, \n title={FoVolNet: Fast Volume Rendering Using Foveated Deep Neural Networks}, \n year={2022},\n volume={},\n number={},\n pages={1-11},\n doi={10.1109/TVCG.2022.3209498}}"
         },
         {
             "title": "A Flexible Data Streaming Design for Interactive Visualization of Large-Scale Volume Data",
             "date": "2022-06-13",
-            "venue": "The Eurographics Symposium on Parallel Graphics and Visualization (EGPGV)",
+            "venue": "@EGPGV",
             "authors": "Qi Wu, Michael J. Doyle, and Kwan-Liu Ma",
             "abstract": "Modern simulations and experiments can produce massive amounts of high-fidelity data that are challenging to transport and visualize interactively. We have designed a data streaming system to support interactive visualization of large volume data. Our streaming system design is unique in its flexibility to support diverse data organizations and its coupling with a highly efficient CPU-based ray-tracing renderer. In this paper, we present our streaming and rendering design and demonstrate the efficacy of our system with progressive rendering of streaming tree-based AMR (TAMR) volume data and radial basis function (RBF) particle volume data. With our system, interactive visualization can be achieved using only a mid-range workstation with a single CPU and a modest quantity of RAM.",
             "permalink": "egpgv2022-streaming-volume",
@@ -26,7 +45,7 @@
         {
             "title": "DIVA: A Declarative and Reactive Language for in situ Visualization",
             "date": "2020-10-25",
-            "venue": "IEEE Symposium on Large Data Analysis and Visualization (LDAV)",
+            "venue": "@LDAV",
             "authors": "Qi Wu, Tyson Neuroth, Oleg Igouchkine, Konduri Aditya, Jacqueline H. Chen, and Kwan-Liu Ma",
             "abstract": "The use of adaptive workflow management for in situ visualization and analysis has been a growing trend in large-scale scientific simulations. However, coordinating adaptive workflows with traditional procedural programming languages can be difficult because system flow is determined by unpredictable scientific phenomena, which often appear in an unknown order and can evade event handling. This makes the implementation of adaptive workflows tedious and error-prone. Recently, reactive and declarative programming paradigms have been recognized as well-suited solutions to similar problems in other domains. However, there is a dearth of research on adapting these approaches to in situ visualization and analysis. With this paper, we present a language design and runtime system for developing adaptive systems through a declarative and reactive programming paradigm. We illustrate how an adaptive workflow programming system is implemented using our approach and demonstrate it with a use case from a combustion simulation.",
             "permalink": "ldav2020-diva",
@@ -37,7 +56,7 @@
         {
             "title": "VisIt-OSPRay: toward an exascale volume visualization system",
             "date": "2018-06-04",
-            "venue": "The Eurographics Symposium on Parallel Graphics and Visualization (EGPGV)",
+            "venue": "@EGPGV",
             "authors": "Qi Wu, Will Usher, Steve Petruzza, Sidharth Kumar, Feng Wang, Ingo Wald, Valerio Pascucci, and Charles D. Hansen",
             "abstract": "Large-scale simulations can easily produce data in excess of what can be efficiently visualized using production visualization software, making it challenging for scientists to gain insights from the results of these simulations. This trend is expected to grow with exascale. To meet this challenge, and run on the highly parallel hardware being deployed on HPC system, rendering systems in production visualization software must be redesigned to perform well at these new scales and levels of parallelism. In this work, we present VisIt-OSPRay, a high-performance, scalable, hybrid-parallel rendering system in VisIt, using OSPRay and IceT, coupled with PIDX for scalable I/O. We examine the scalability and memory efficiency of this system and investigate further areas for improvement to prepare VisIt for upcoming exascale workloads.",
             "permalink": "egpgv2018-visit-ospray",
@@ -48,7 +67,7 @@
         {
             "title": "CPU Isosurface Ray Tracing of Adaptive Mesh Refinement Data",
             "date": "2018-10-16",
-            "venue": "IEEE Visualization Conference (VIS)",
+            "venue": "@VIS",
             "authors": "Feng Wang, Ingo Wald, Qi Wu, Will Usher, and Chris R. Johnson",
             "abstract": "Adaptive mesh refinement (AMR) is a key technology for large-scale simulations that allows for adaptively changing the simulation mesh resolution, resulting in significant computational and storage savings. However, visualizing such AMR data poses a significant challenge due to the difficulties introduced by the hierarchical representation when reconstructing continuous field values. In this paper, we detail a comprehensive solution for interactive isosurface rendering of block-structured AMR data. We contribute a novel reconstruction strategy-the octant method-which is continuous, adaptive and simple to implement. Furthermore, we present a generally applicable hybrid implicit isosurface ray-tracing method, which provides better rendering quality and performance than the built-in sampling-based approach in OSPRay. Finally, we integrate our octant method and hybrid isosurface geometry into OSPRay as a module, providing the ability to create high-quality interactive visualizations combining volume and isosurface representations of BS-AMR data. We evaluate the rendering performance, memory consumption and quality of our method on two gigascale block-structured AMR datasets.",
             "permalink": "vis2018-impl",
@@ -59,7 +78,7 @@
         {
             "title": "Ray Tracing Generalized Tube Primitives: Method and Applications",
             "date": "2019-06-01",
-            "venue": "Eurographics Conference on Visualization (EuroVis)",
+            "venue": "@EuroVis",
             "authors": "Mengjiao Han, Ingo Wald, Will Usher, Qi Wu, Feng Wang, Valerio Pascucci, Charles D. Hansen, and Chris R. Johnson",
             "abstract": "We present a general high-performance technique for ray tracing generalized tube primitives. Our technique efficiently supports tube primitives with fixed and varying radii, general acyclic graph structures with bifurcations, and correct transparency with interior surface removal. Such tube primitives are widely used in scientific visualization to represent diffusion tensor imaging tractographies, neuron morphologies, and scalar or vector fields of 3D flow. We implement our approach within the OSPRay ray tracing framework, and evaluate it on a range of interactive visualization use cases of fixed- and varying-radius streamlines, pathlines, complex neuron morphologies, and brain tractographies. Our proposed approach provides interactive, high-quality rendering, with low memory overhead.",
             "permalink": "eurovis2019-tubes",
