@@ -5,13 +5,36 @@
         "EGPGV": "The Eurographics Symposium on Parallel Graphics and Visualization (EGPGV)",
         "LDAV": "IEEE Symposium on Large Data Analysis and Visualization (LDAV)",
         "EuroVis": "Eurographics Conference on Visualization (EuroVis)",
-        "arxiv": "ArXiv Preprint"
+        "arxiv": "ArXiv Preprint",
+        "TVCG": "IEEE Transactions on Visualization and Computer Graphics (TVCG)"
     },
     "data": [
         {
+            "title": "Memory-Efficient GPU Volume Path Tracing of AMR Data Using the Dual Mesh",
+            "date": "2023-02-27",
+            "venue": "Eurographics Conference on Visualization (EuroVis) (to be appeared)",
+            "authors": "Stefan Zellmann, Qi Wu, Kwan-Liu Ma, and Ingo Wald",
+            "abstract": "(to be appeared)",
+            "permalink": "stitcher",
+            "link": "None",
+            "citation": "(to be appeared)",
+            "bibtex": "(to be appeared)"
+        },
+        {
+            "title": "Beyond ExaBricks: GPU Volume Path Tracing of AMR Data",
+            "date": "2022-11-18",
+            "venue": "@arxiv",
+            "authors": "Stefan Zellmann, Qi Wu, Alper Sahistan, Kwan-Liu Ma, and Ingo Wald",
+            "abstract": "Adaptive Mesh Refinement (AMR) is becoming a prevalent data representation for scientific visualization. Resulting from large fluid mechanics simulations, the data is usually cell centric, imposing a number of challenges for high quality reconstruction at sample positions. While recent work has concentrated on real-time volume and isosurface rendering on GPUs, the rendering methods used still focus on simple lighting models without scattering events and global illumination. As in other areas of rendering, key to real-time performance are acceleration data structures; in this work we analyze the major bottlenecks of data structures that were originally optimized for camera/primary ray traversal when used with the incoherent ray tracing workload of a volumetric path tracer, and propose strategies to overcome the challenges coming with this.",
+            "permalink": "beyond-exabrick",
+            "link": "https://arxiv.org/abs/2211.09997",
+            "citation": "Zellmann, Stefan, Qi Wu, Alper Sahistan, Kwan-Liu Ma, and Ingo Wald. \"Beyond ExaBricks: GPU Volume Path Tracing of AMR Data.\" ArXiv preprint arXiv:2211.09997 (2022).",
+            "bibtex": "@article{zellmann2022beyond,\n title={Beyond ExaBricks: GPU Volume Path Tracing of AMR Data},\n author={Zellmann, Stefan and Wu, Qi and Sahistan, Alper and Ma, Kwan-Liu and Wald, Ingo},\n journal={arXiv preprint arXiv:2211.09997},\n year={2022}\n}"
+        },
+        {
             "title": "Instant Neural Representation for Interactive Volume Rendering",
             "date": "2022-10-24",
-            "venue": "@arxiv",
+            "venue": "ArXiv Preprint (Under Revision for TVCG)",
             "authors": "Qi Wu, David Bauer, Michael J. Doyle, and Kwan-Liu Ma",
             "abstract": "Neural networks have shown great potential in compressing volume data for visualization. However, due to the high cost of training and inference, such volumetric neural representations have thus far only been applied to offline data processing and non-interactive rendering. In this paper, we demonstrate that by simultaneously leveraging modern GPU tensor cores, a native CUDA neural network framework, and a well-designed rendering algorithm with macro-cell acceleration, we can interactively ray trace volumetric neural representations (10-60fps). Our neural representations are also high-fidelity (PSNR > 30dB) and compact (10-1000x smaller). Additionally, we show that it is possible to fit the entire training step inside a rendering loop and skip the pre-training process completely. To support extreme-scale volume data, we also develop an efficient out-of-core training strategy, which allows our volumetric neural representation training to potentially scale up to terascale using only an NVIDIA RTX 3090 workstation.",
             "permalink": "arxiv-instant-vnr",
