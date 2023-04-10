@@ -13,9 +13,3 @@ permalink: "/publication/arxiv-beyond-exabrick"
 date: 2022-11-18
 collection: "publications"
 ---
-<!-- ![image](/images/pubs/eurovis2019-tubes-teaser.png) -->
-
-<!-- <figure>
-<img src="/images/pubs/arxiv-beyond-teaser.png" alt="image">
-<figcaption align = "center">Figure 1: AMR rendering comparison using ExaBrick vs. our extended framework. Top-left: original “sci-vis style” renderingwith ray marching, local shading with on-the-fly gradients, and a delta light source. Bottom-right: volumetric path tracing with multiscattering, isotropic phase function and ambient lighting. The original software used two RTX 8000 GPUs to render a convergence frame with allquality settings set to maximum at 4 frames/sec.; our framework, with the best combination of optimizations discussed in this paper, renderspath-traced convergence frames with full global illumination at 6.7 frames/sec.</figcaption>
-</figure> -->

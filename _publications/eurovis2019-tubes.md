@@ -1,6 +1,6 @@
 ---
 title: "Ray Tracing Generalized Tube Primitives: Method and Applications"
-venue: "Eurographics Conference on Visualization (EuroVis)"
+venue: "The Eurographics Conference on Visualization (EuroVis)"
 authors: "Mengjiao Han, Ingo Wald, Will Usher, Qi Wu, Feng Wang, Valerio Pascucci, Charles D. Hansen, and Chris R. Johnson"
 preprint_url: "https://drive.google.com/file/d/17pB_tIKD3jF6bVT1u9wpx9dwO_MqD-n6/view?usp=sharing"
 official_url: "https://doi.org/10.1111/cgf.13703"
