@@ -33,12 +33,13 @@
             "teaser": "arxiv-photon-field-teaser.png",
             "teaser_caption": "Figure 1: Our photon field networks replace the global illumination term of the rendering equation. With our approach we are able to achieve comparable results for volumetric rendering in a fraction of the time it takes a conventional path tracer. The photon fields are light-weight and can be trained in seconds.",
             "permalink": "arxiv-photon-field",
-            "date": "2023-03-31"
+            "date": "2023-03-30"
         },
         {
             "title": "Memory-Efficient GPU Volume Path Tracing of AMR Data Using the Dual Mesh",
             "venue": "@EuroVis",
             "authors": "Stefan Zellmann, Qi Wu, Kwan-Liu Ma, and Ingo Wald",
+            "abstract": "A common way to render cell-centric adaptive mesh refinement (AMR) data is to compute the dual mesh and visualize that with a standard unstructured element renderer. While the dual mesh provides a high-quality interpolator, the memory requirements of the dual mesh data structure are significantly higher than those of the original grid, which prevents rendering very large data sets. We introduce a GPU-friendly data structure and a clustering algorithm that allow for efficient AMR dual mesh rendering with a competitive memory footprint. Fundamentally, any off-the-shelf unstructured element renderer running on GPUs could be extended to support our data structure just by adding a gridlet element type in addition to the standard tetrahedra, pyramids, wedges, and hexahedra supported by default. We integrated the data structure into a volumetric path tracer to compare it to various state-of-the-art unstructured element sampling methods. We show that our data structure easily competes with these method in terms of rendering performance, but is much more memory-efficient.",
             "preprint_url": "https://drive.google.com/file/d/1oW1ZMzcH_Yxh7ST7gMfreQqTFrhlpmWo/view?usp=share_link",
             "preview": "eurovis2023-stitcher.png",
             "teaser": "eurovis2023-stitcher-teaser.png",

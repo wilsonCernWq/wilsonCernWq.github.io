@@ -8,6 +8,6 @@ preview: "pubs/arxiv-photon-field.png"
 teaser: "pubs/arxiv-photon-field-teaser.png"
 teaser_caption: "Figure 1: Our photon field networks replace the global illumination term of the rendering equation. With our approach we are able to achieve comparable results for volumetric rendering in a fraction of the time it takes a conventional path tracer. The photon fields are light-weight and can be trained in seconds."
 permalink: "/publication/arxiv-photon-field"
-date: 2023-03-31
+date: 2023-03-30
 collection: "publications"
 ---
