@@ -1,17 +1,3 @@
----
-title: "Instant Neural Representation for Interactive Volume Rendering"
-venue: "Under Revision for TVCG"
-authors: "Qi Wu, David Bauer, Michael J. Doyle, and Kwan-Liu Ma"
-preprint_url: "https://drive.google.com/file/d/1IyXgzGw7EpHWAsakZoHsE8aU9RqdjHyg/view?usp=sharing"
-official_url: "https://arxiv.org/abs/2207.11620"
-preview: "pubs/tvcg-instant-vnr.png"
-bibtex: "@article{wu2022instant,\n    title={Instant Neural Representation for Interactive Volume Rendering},\n    author={Wu, Qi and Doyle, Michael J and Bauer, David and Ma, Kwan-Liu},\n    journal={arXiv preprint arXiv:2207.11620},\n    year={2022}\n}"
-permalink: "/publication/arxiv-instant-vnr"
-date: 2022-10-24
-collection: "publications"
----
-
-<figure><img src="/images/pubs/tvcg-instant-vnr-teaser.png" alt="image"><figcaption align = "center">Figure 1: A) An overview of our work. The sampling step randomly and uniformly generates sample using the ground truth (GT) data. The ground truth data can be loaded via out-of-core streaming. The training step optimizes the neural network. The rendering step renders the neural network via in-shader or sample-streaming methods. Our approach accommodates both pre-training and online-training. Our novel contributions are highlighted in yellow. B) The architecture of our neural network with the multi-resolution hash grid encoding method.</figcaption></figure>
 <!-- ![image](/images/pubs/tvcg-instant-vnr-teaser.png) -->
 
 <!-- 

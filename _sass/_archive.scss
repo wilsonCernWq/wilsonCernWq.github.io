@@ -40,12 +40,16 @@
 }
 
 .archive__item-title {
-  margin-bottom: 0.25em;
-  font-family: $sans-serif-narrow;
-
+  margin-bottom: 0.5em;
+  // font-family: $sans-serif-narrow;
+  font-size: 20px;
   a + a {
     opacity: 0.5;
   }
+}
+
+.archive__item-content {
+  margin-bottom: 0.5em;
 }
 
 /* remove border*/

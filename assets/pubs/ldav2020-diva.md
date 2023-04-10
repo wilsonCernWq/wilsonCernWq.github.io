@@ -1,17 +1,3 @@
----
-title: "DIVA: A Declarative and Reactive Language for in situ Visualization"
-venue: "IEEE Symposium on Large Data Analysis and Visualization (LDAV)"
-authors: "Qi Wu, Tyson Neuroth, Oleg Igouchkine, Konduri Aditya, Jacqueline H. Chen, and Kwan-Liu Ma"
-preprint_url: "https://drive.google.com/file/d/1i_D4LDDRNM_CSOoTgT6iE3a6D2yzbUr4/view?usp=sharing"
-official_url: "https://doi.org/10.1109/LDAV51489.2020.00007"
-preview: "pubs/diva.png"
-bibtex: "@inproceedings{wu2020diva,\n    title={{DIVA}: A Declarative and Reactive Language for in situ Visualization},\n    author={Wu, Qi and Neuroth, Tyson and Igouchkine, Oleg and Aditya, Konduri and Chen, Jacqueline H and Ma, Kwan-Liu},\n    booktitle={2020 IEEE 10th Symposium on Large Data Analysis and Visualization (LDAV)},\n    pages={1--11},\n    year={2020},\n    organization={IEEE}\n}"
-permalink: "/publication/ldav2020-diva"
-date: 2020-10-25
-collection: "publications"
----
-
-<figure><img src="/images/pubs/diva-teaser.png" alt="image"><figcaption align = "center">Figure 1: A DIVA program is processed through three layers. Users typically specify their program using the declarative interface (left); then the language parser will translate it into an internal DAG representation; this representation will then be interpreted into a low-level dataflow API for execution. A) A DIVA program computes a volume rendering for every 5 timesteps, and saves the rendering on disk. B) The same program in the DAG representation. C) The same program in the low-level API. Because the C++ API is not declarative, in part C), statements have to be executed in order. Moreover, because C++ does not track data dependencies automatically, all variables declared in C) should be wrapped by lifting operators (e.g., divaCreateSource). D) The hierarchy of primitives defined by the low-level dataflow API: All values in DIVA are signals; values depending on external inputs are sources; values returning to the environment are actions (e.g., a saved image file); triggers are special primitives that decide which actions to compute based on predicates; rest values are internal to the workflow and are represented by either pure (i.e., DivaPureOp) or impure functions (i.e., DivaImpure).</figcaption></figure>
 
 <!-- <figure>
 <img src="/images/pubs/diva-teaser.png" alt="image">

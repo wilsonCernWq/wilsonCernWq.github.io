@@ -1,0 +1,129 @@
+{
+    "collection": "publications",
+    "venues": {
+        "VIS": "IEEE Visualization Conference (VIS)",
+        "EGPGV": "The Eurographics Symposium on Parallel Graphics and Visualization (EGPGV)",
+        "LDAV": "IEEE Symposium on Large Data Analysis and Visualization (LDAV)",
+        "EuroVis": "Eurographics Conference on Visualization (EuroVis)",
+        "arxiv": "ArXiv Preprint",
+        "TVCG": "IEEE Transactions on Visualization and Computer Graphics (TVCG)"
+    },
+    "data": [
+        {
+            "title": "Memory-Efficient GPU Volume Path Tracing of AMR Data Using the Dual Mesh",
+            "venue": "@EuroVis",
+            "authors": "Stefan Zellmann, Qi Wu, Kwan-Liu Ma, and Ingo Wald",
+            "preprint_url": "https://drive.google.com/file/d/1oW1ZMzcH_Yxh7ST7gMfreQqTFrhlpmWo/view?usp=share_link",
+            "preview": "stitcher-2023.png",
+            "teaser": "stitcher-2023-teaser.png",
+            "teaser_caption": "Figure 1: Overview of our method. Given a block-structured or octree-AMR data set (left) we first create the dual mesh (middle) and split that into the truly unstructured elements used to stitch the level boundaries (red) and those that are regular voxels (blue/white checkered). We then cluster voxels to become agridletso. Right: gridlets colorized by their ID. We build a bounding volume hierarchy over the gridlets and the remaining unstructured elements. The result is a sampleable representation that generates the exact same result as sampling on the dual mesh directly, but with significantly lower memory overhead and higher sampling speed. On our largest data sets, we see memory savings of up to 3× compared to highly compressed state-of-the-art unstructured mesh representations.",
+            "permalink": "eurovis2023-stitcher",
+            "date": "2023-02-27"
+        },
+        {
+            "title": "Beyond ExaBricks: GPU Volume Path Tracing of AMR Data",
+            "venue": "@arxiv",
+            "authors": "Stefan Zellmann, Qi Wu, Alper Sahistan, Kwan-Liu Ma, and Ingo Wald",
+            "preprint_url": "https://arxiv.org/abs/2211.09997",
+            "official_url": "https://arxiv.org/abs/2211.09997",
+            "preview": "arxiv-beyond.png",
+            "teaser": "arxiv-beyond-teaser.png",
+            "teaser_caption": "Figure 1: AMR rendering comparison using ExaBrick vs. our extended framework. Top-left: original \"sci-vis style\" renderingwith ray marching, local shading with on-the-fly gradients, and a delta light source. Bottom-right: volumetric path tracing with multiscattering, isotropic phase function and ambient lighting. The original software used two RTX 8000 GPUs to render a convergence frame with allquality settings set to maximum at 4 frames/sec.; our framework, with the best combination of optimizations discussed in this paper, renderspath-traced convergence frames with full global illumination at 6.7 frames/sec.",
+            "bibtex": "@article{zellmann2022beyond,\\n    title={Beyond ExaBricks: GPU Volume Path Tracing of AMR Data},\\n    author={Zellmann, Stefan and Wu, Qi and Sahistan, Alper and Ma, Kwan-Liu and Wald, Ingo},\\n    journal={arXiv preprint arXiv:2211.09997},\\n    year={2022}\\n}",
+            "permalink": "arxiv-beyond-exabrick",
+            "date": "2022-11-18"
+        },
+        {
+            "title": "FoVolNet: Fast Volume Rendering using Foveated Deep Neural Networks",
+            "venue": "@VIS",
+            "award": "Best Paper Honorable Mentions",
+            "authors": "David Bauer, Qi Wu, and Kwan-Liu Ma",
+            "permalink": "vis2022-fovonet",
+            "preprint_url": "https://drive.google.com/file/d/1-H7rtC_VH88oNp10kKSCacFE3IU2VCjj/view?usp=sharing",
+            "official_url": "https://doi.org/10.1109/TVCG.2022.3209498",
+            "preview": "vis2022-fovolnet.png",
+            "teaser": "vis2022-fovolnet-teaser.png",
+            "teaser_caption": "Figure 1: We propose a novel rendering pipeline for fast volume rendering using optimized foveated sparse rendering and deep neural reconstruction networks. FoVolNet can faithfully reconstruct visual information from sparse inputs. With FoVolNet, developers are able to significantly improve rendering time without sacrificing visual quality.",
+            "bibtex": "@article{bauer2022fovolnet,\\n    author = {D. Bauer and Q. Wu and K. Ma},\\n    journal = {IEEE Transactions on Visualization &amp; Computer Graphics},\\n    title = {FoVolNet: Fast Volume Rendering using Foveated Deep Neural Networks},\\n    year = {2023},\\n    volume = {29},\\n    number = {01},\\n    issn = {1941-0506},\\n    pages = {515-525},\\n    doi = {10.1109/TVCG.2022.3209498},\\n    publisher = {IEEE Computer Society},\\n    address = {Los Alamitos, CA, USA},\\n    month = {jan}\\n}",
+            "date": "2022-09-26"
+        },
+        {
+            "title": "Instant Neural Representation for Interactive Volume Rendering",
+            "venue": "Under Revision for TVCG",
+            "authors": "Qi Wu, David Bauer, Michael J. Doyle, and Kwan-Liu Ma",
+            "preprint_url": "https://drive.google.com/file/d/1IyXgzGw7EpHWAsakZoHsE8aU9RqdjHyg/view?usp=sharing",
+            "official_url": "https://arxiv.org/abs/2207.11620",
+            "preview": "tvcg-instant-vnr.png",
+            "teaser": "tvcg-instant-vnr-teaser.png",
+            "teaser_caption": "Figure 1: A) An overview of our work. The sampling step randomly and uniformly generates sample using the ground truth (GT) data. The ground truth data can be loaded via out-of-core streaming. The training step optimizes the neural network. The rendering step renders the neural network via in-shader or sample-streaming methods. Our approach accommodates both pre-training and online-training. Our novel contributions are highlighted in yellow. B) The architecture of our neural network with the multi-resolution hash grid encoding method.",
+            "bibtex": "@article{wu2022instant,\\n    title={Instant Neural Representation for Interactive Volume Rendering},\\n    author={Wu, Qi and Doyle, Michael J and Bauer, David and Ma, Kwan-Liu},\\n    journal={arXiv preprint arXiv:2207.11620},\\n    year={2022}\\n}",
+            "permalink": "arxiv-instant-vnr",
+            "date": "2022-10-24"
+        },
+        {
+            "title": "A Flexible Data Streaming Design for Interactive Visualization of Large-Scale Volume Data",
+            "venue": "@EGPGV",
+            "authors": "Qi Wu, Michael J. Doyle, and Kwan-Liu Ma",
+            "preprint_url": "https://drive.google.com/file/d/13laOefDThpDUr-nxfpjTVLdTI2tiNpCi/view?usp=sharing",
+            "official_url": "https://doi.org/10.2312/pgv.20221064",
+            "preview": "egpgv2022-streaming-volume.png",
+            "teaser": "egpgv2022-streaming-volume-teaser.png",
+            "teaser_caption": "Figure 1: Large-scale progressive volume rendering of the deep ocean water asteroid impact dataset. A) In our system, the progressive rendering is done by breaking the volume interval into smaller segments, and only compute one segment per frame. B) Additionally, our system can also break the framebuffer into smaller tiles, and only render one tile at a time. Both method allows our rendering system to significantly reduce memory footprints.",
+            "bibtex": "@inproceedings{wu2022flexible,\\n    booktitle = {Eurographics Symposium on Parallel Graphics and Visualization},\\n    editor = {Bujack, Roxana and Tierny, Julien and Sadlo, Filip},\\n    title = {{A Flexible Data Streaming Design for Interactive Visualization of Large-Scale Volume Data}},\\n    author = {Wu, Qi and Doyle, Michael J. and Ma, Kwan-Liu},\\n    year = {2022},\\n    publisher = {The Eurographics Association},\\n    ISSN = {1727-348X},\\n    ISBN = {978-3-03868-175-5},\\n    DOI = {10.2312/pgv.20221064}\\n}",
+            "permalink": "egpgv2022-streaming-volume",
+            "date": "2022-06-13"
+        },
+        {
+            "title": "DIVA: A Declarative and Reactive Language for in situ Visualization",
+            "venue": "@LDAV",
+            "authors": "Qi Wu, Tyson Neuroth, Oleg Igouchkine, Konduri Aditya, Jacqueline H. Chen, and Kwan-Liu Ma",
+            "preprint_url": "https://drive.google.com/file/d/1i_D4LDDRNM_CSOoTgT6iE3a6D2yzbUr4/view?usp=sharing",
+            "official_url": "https://doi.org/10.1109/LDAV51489.2020.00007",
+            "preview": "diva.png",
+            "teaser": "diva-teaser.png",
+            "teaser_caption": "Figure 1: A DIVA program is processed through three layers. Users typically specify their program using the declarative interface (left); then the language parser will translate it into an internal DAG representation; this representation will then be interpreted into a low-level dataflow API for execution. A) A DIVA program computes a volume rendering for every 5 timesteps, and saves the rendering on disk. B) The same program in the DAG representation. C) The same program in the low-level API. Because the C++ API is not declarative, in part C), statements have to be executed in order. Moreover, because C++ does not track data dependencies automatically, all variables declared in C) should be wrapped by lifting operators (e.g., divaCreateSource). D) The hierarchy of primitives defined by the low-level dataflow API: All values in DIVA are signals; values depending on external inputs are sources; values returning to the environment are actions (e.g., a saved image file); triggers are special primitives that decide which actions to compute based on predicates; rest values are internal to the workflow and are represented by either pure (i.e., DivaPureOp) or impure functions (i.e., DivaImpure).",
+            "bibtex": "@inproceedings{wu2020diva,\\n    title={{DIVA}: A Declarative and Reactive Language for in situ Visualization},\\n    author={Wu, Qi and Neuroth, Tyson and Igouchkine, Oleg and Aditya, Konduri and Chen, Jacqueline H and Ma, Kwan-Liu},\\n    booktitle={2020 IEEE 10th Symposium on Large Data Analysis and Visualization (LDAV)},\\n    pages={1--11},\\n    year={2020},\\n    organization={IEEE}\\n}",
+            "permalink": "ldav2020-diva",
+            "date": "2020-10-25"
+        },
+        {
+            "title": "VisIt-OSPRay: toward an exascale volume visualization system",
+            "venue": "@EGPGV",
+            "authors": "Qi Wu, Will Usher, Steve Petruzza, Sidharth Kumar, Feng Wang, Ingo Wald, Valerio Pascucci, and Charles D. Hansen",
+            "preprint_url": "https://drive.google.com/file/d/1ulrP4ogjIoxCR2A_oE9afemqhyK04lLA/view?usp=sharing",
+            "official_url": "https://dl.acm.org/doi/10.5555/3293524.3293526",
+            "preview": "egpgv2018-visit-ospray.png",
+            "teaser": "egpgv2018-visit-ospray-teaser.png",
+            "teaser_caption": "Figure 1: High-quality interactive volume visualization using VisIt-OSPRay: a) volume rendering of O2 concentration inside a combustion chamber; b) volume rendering of the Richtmyer-Meshkov Instability; c) visualization of a supernova simulation; d) visualization of the aneurysm dataset using volume rendering and streamlines; e) scalable volume rendering of the 966GB DNS data on 64 Stampede2 Intel® Xeon Phi™ Knight’s Landing nodes.",
+            "bibtex": "@inproceedings{wu2018visit,\\n    author = {Wu, Qi and Usher, Will and Petruzza, Steve and Kumar, Sidharth and Wang, Feng and Wald, Ingo and Pascucci, Valerio and Hansen, Charles D.},\\n    title = {{VisIt-OSPRay}: Toward an Exascale Volume Visualization System},\\n    year = {2018},\\n    publisher = {Eurographics Association},\\n    address = {Goslar, DEU},\\n    booktitle = {Proceedings of the Symposium on Parallel Graphics and Visualization},\\n    pages = {13–24},\\n    numpages = {12},\\n    location = {Brno, Czech Republic},\\n    series = {EGPGV '18}\\n}",
+            "permalink": "egpgv2018-visit-ospray",
+            "date": "2018-06-04"
+        },
+        {
+            "title": "CPU Isosurface Ray Tracing of Adaptive Mesh Refinement Data",
+            "venue": "@VIS",
+            "authors": "Feng Wang, Ingo Wald, Qi Wu, Will Usher, and Chris R. Johnson",
+            "preprint_url": "https://drive.google.com/file/d/1cNUeMO8X8hUjtTWlrVxslmeLOdq3vdyJ/view?usp=sharing",
+            "official_url": "https://doi.org/10.1109/TVCG.2018.2864850",
+            "preview": "vis2018-impl.png",
+            "teaser": "vis2018-impl-teaser.png",
+            "teaser_caption": "Figure 1: We propose a novel rendering pipeline for fast volume rendering using optimized foveated sparse rendering and deep neural reconstruction networks. FoVolNet can faithfully reconstruct visual information from sparse inputs. With FoVolNet, developers are able to significantly improve rendering time without sacrificing visual quality.",
+            "bibtex": "@article{wang2018cpu,\\n    author={Wang, Feng and Wald, Ingo and Wu, Qi and Usher, Will and Johnson, Chris R.},\\n    journal={IEEE Transactions on Visualization and Computer Graphics}, \\n    title={CPU Isosurface Ray Tracing of Adaptive Mesh Refinement Data}, \\n    year={2019},\\n    volume={25},\\n    number={1},\\n    pages={1142-1151},\\n    doi={10.1109/TVCG.2018.2864850}\\n}",
+            "permalink": "vis2018-impl",
+            "date": "2018-10-16"
+        },
+        {
+            "title": "Ray Tracing Generalized Tube Primitives: Method and Applications",
+            "venue": "@EuroVis",
+            "authors": "Mengjiao Han, Ingo Wald, Will Usher, Qi Wu, Feng Wang, Valerio Pascucci, Charles D. Hansen, and Chris R. Johnson",
+            "preprint_url": "https://drive.google.com/file/d/17pB_tIKD3jF6bVT1u9wpx9dwO_MqD-n6/view?usp=sharing",
+            "official_url": "https://doi.org/10.1111/cgf.13703",
+            "preview": "eurovis2019-tubes.png",
+            "teaser": "eurovis2019-tubes-teaser.png",
+            "teaser_caption": "Figure 1: Visualizations using our \"generalized tube\" primitives. (a): DTI tractography data, semi-transparent fixed-radius streamlines (218K line segments). (b): A generated neuron assembly test case, streamlines with varying radii and bifurcations (3.2M l. s.). (c): Aneurysm morphology, semi-transparent streamlines with varying radii and bifurcations (3.9K l. s.) and an opaque center line with fixed radius and bifurcations (3.9K l. s.). (d): A tornado simulation, withradius used to encode the velocity magnitude (3.56M l. s.). (e): Flow past a torus, fixed-radiuspathlines (6.5M l. s.). Rendered at: (a) 0.38FPS, (b) 7.2FPS, (c) 0.25FPS, (d) 18.8FPS, with a 20482 framebuffer; (e) 23FPS with a 2048 x 786 framebuffer Performance measured on a dual Intel® Xeon® E5-2640 v4 workstation, with shadows and ambient occlusion.",
+            "bibtex": "@inproceedings{han2019ray,\\n    title={Ray tracing generalized tube primitives: Method and applications},\\n    author={Han, Mengjiao and Wald, Ingo and Usher, Will and Wu, Qi and Wang, Feng and Pascucci, Valerio and Hansen, Charles D. and Johnson, Chris R.},\\n    booktitle={Computer Graphics Forum},\\n    volume={38},\\n    number={3},\\n    pages={467--478},\\n    year={2019},\\n    organization={Wiley Online Library}\\n}",
+            "permalink": "eurovis2019-tubes",
+            "date": "2019-06-01"
+        }
+    ]
+}

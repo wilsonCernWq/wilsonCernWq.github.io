@@ -23,7 +23,6 @@
 
 # In[2]:
 
-import pandas as pd
 import json
 
 
@@ -36,44 +35,28 @@ import json
 # In[3]:
 
 # publications = pd.read_csv("publications.tsv", sep="\t", header=0)
-with open('publications.json') as f:
-    publications_json = json.load(f)
-    assert publications_json["collection"] == "publications"
+with open("publications.json") as f:
+    publications = json.load(f)
+    assert publications["collection"] == "publications"
 
-    venues = dict(publications_json["venues"])
+    venues = dict(publications["venues"])
 
-    d = {
-        "title": [],
-        "venue": [],
-        "date": [],
-        "award": [],
-        "excerpt": [],
-        "citation": [],
-        "permalink": [],
-        "link": [],
-        "bibtex": [],
-        "authors": []
-    }
-    for pub in publications_json["data"]:
-        d["title"].append(pub["title"])
+    for pub in publications["data"]:
 
+        pub["_permalink"] = pub["permalink"]
+        pub["permalink"] = "/publication/" + pub["permalink"]
+
+        pub["collection"] = "publications"
+
+        # translate venues
         if pub["venue"][0] == "@":
-            d["venue"].append(venues[pub["venue"][1:]])
-        else:
-            d["venue"].append(pub["venue"])
+            pub["venue"] = venues[pub["venue"][1:]]
 
-        d["date"].append(pub["date"])
-        d["excerpt"].append(pub["abstract"])
-        d["permalink"].append(pub["permalink"])
-        d["link"].append(pub["link"])
-        d["citation"].append(pub["citation"])
-        d["bibtex"].append(pub["bibtex"])
-        d["authors"].append(pub["authors"])
-        if "award" in pub:
-            d["award"].append(pub["award"])
-        else:
-            d["award"].append("")
-    publications = pd.DataFrame(d)
+        # add other preprocessing items
+        if "teaser" in pub:
+            pub["teaser"] = "pubs/" + pub["teaser"]
+        if "preview" in pub:
+            pub["preview"] = "pubs/" + pub["preview"]
 
 # ## Escape special characters
 # 
@@ -98,57 +81,42 @@ def html_escape(text):
 
 # In[5]:
 
+def gen_header(data):
+    outputs = []
+    for key, value in data.items():
+        if key == "date":
+            outputs.append(f"{key}: {value}")
+        else:
+            outputs.append(f"{key}: \"{value}\"")
+    return "\n".join(outputs)
+
 import os
-for row, item in publications.iterrows():
-    
-    md_filename = item.permalink + ".md"
-    html_filename = item.permalink
-    year = item.date[:4]
-    
+for pub in publications["data"]:
+
+    filename = str(pub["_permalink"]) + ".md"
+    year = pub["date"][:4]
+
+    del pub["_permalink"]
+
+    teaser = ""
+    if "teaser" in pub:
+        teaser += "<figure>"
+        teaser += f"<img src=\"/images/{pub['teaser']}\" alt=\"image\">"
+        if "teaser_caption" in pub:
+            teaser += f"<figcaption align = \"center\">{pub['teaser_caption']}</figcaption>"
+            del pub["teaser_caption"]
+        teaser += "</figure>\n"
+        del pub["teaser"]
+
     ## YAML variables
-    
-    md = "---\ntitle: \""   + item.title + '"\n'
-    
-    md += """collection: publications"""
-    
-    md += """\npermalink: /publication/""" + html_filename
-    
-    if len(str(item.excerpt)) > 0:
-        md += "\nexcerpt: '" + html_escape(item.excerpt) + "'"
-    
-    md += "\ndate: " + str(item.date) 
+    md = f"---\n{gen_header(pub)}\n---\n"
 
-    if len(str(item.award)) > 0:
-        md += "\naward: '" + html_escape(item.award) + "'"
-    
-    md += "\nvenue: '" + html_escape(item.venue) + "'"
+    md += "\n" + teaser
 
-    md += "\nauthors: '" + html_escape(item.authors) + "'"
-    
-    if len(str(item.link)) > 0:
-        md += "\npaperurl: '" + item.link + "'"
-    
-    md += "\ncitation: '" + html_escape(item.citation) + "'"
-    
-    md += "\n---"
-    
-    ## Markdown description for individual page
-    
-    if len(str(item.link)) > 5:
-        md += "\n\n<a href='" + item.link + "'>Download paper here</a>\n" 
-        
-    if len(str(item.excerpt)) > 5:
-        md += "\n" + html_escape(item.excerpt) + "\n"
-        
-    md += "\nRecommended citation: " + item.citation
-    md += "\n\n"
+    with open("pubs/" + filename, 'r') as template:
+        md += template.read()
 
-    md += "{% raw %}\n"
-    md += "```\n"
-    md += item.bibtex
-    md += "\n```\n{% endraw %}\n"
-
-    md_filename = os.path.basename(md_filename)
+    filename = os.path.basename(filename)
        
-    with open("../_publications/" + md_filename, 'w') as f:
+    with open("../_publications/" + filename, 'w') as f:
         f.write(md)
