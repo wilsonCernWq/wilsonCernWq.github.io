@@ -4,12 +4,12 @@ venue: "Eurographics Conference on Visualization (EuroVis)"
 authors: "Stefan Zellmann, Qi Wu, Kwan-Liu Ma, and Ingo Wald"
 preprint_url: "https://drive.google.com/file/d/1oW1ZMzcH_Yxh7ST7gMfreQqTFrhlpmWo/view?usp=share_link"
 preview: "pubs/stitcher-2023.png"
+teaser: "pubs/stitcher-2023-teaser.png"
+teaser_caption: "Figure 1: Overview of our method. Given a block-structured or octree-AMR data set (left) we first create the dual mesh (middle) and split that into the truly unstructured elements used to stitch the level boundaries (red) and those that are regular voxels (blue/white checkered). We then cluster voxels to become agridletso. Right: gridlets colorized by their ID. We build a bounding volume hierarchy over the gridlets and the remaining unstructured elements. The result is a sampleable representation that generates the exact same result as sampling on the dual mesh directly, but with significantly lower memory overhead and higher sampling speed. On our largest data sets, we see memory savings of up to 3x compared to highly compressed state-of-the-art unstructured mesh representations."
 permalink: "/publication/eurovis2023-stitcher"
 date: 2023-02-27
 collection: "publications"
 ---
-
-<figure><img src="/images/pubs/stitcher-2023-teaser.png" alt="image"><figcaption align = "center">Figure 1: Overview of our method. Given a block-structured or octree-AMR data set (left) we first create the dual mesh (middle) and split that into the truly unstructured elements used to stitch the level boundaries (red) and those that are regular voxels (blue/white checkered). We then cluster voxels to become agridletso. Right: gridlets colorized by their ID. We build a bounding volume hierarchy over the gridlets and the remaining unstructured elements. The result is a sampleable representation that generates the exact same result as sampling on the dual mesh directly, but with significantly lower memory overhead and higher sampling speed. On our largest data sets, we see memory savings of up to 3× compared to highly compressed state-of-the-art unstructured mesh representations.</figcaption></figure>
 <!-- ![image](/images/pubs/stitcher-2023-teaser.png) -->
 
 

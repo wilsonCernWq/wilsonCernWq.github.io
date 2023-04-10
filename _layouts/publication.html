@@ -50,6 +50,20 @@ layout: default
 
       <section class="page__content" itemprop="text">
 
+        {% if page.teaser %}
+          <figure>
+            <img src="{{ page.teaser | prepend: '/images/' | prepend: base_path }}" alt="image">
+            {% if page.teaser_caption %}
+              <figcaption align = "center">{{ page.teaser_caption }}</figcaption>
+            {% endif %}
+          </figure>
+        {% endif %}
+
+        {% if page.abstract %}
+          <h3 id="abstract">Abstract</h3>
+          <p>{{ page.abstract }}</p>
+        {% endif %}
+
         {{ content }}
         
         {% if page.bibtex %}

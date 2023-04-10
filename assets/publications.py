@@ -98,23 +98,26 @@ for pub in publications["data"]:
 
     del pub["_permalink"]
 
-    teaser = ""
-    if "teaser" in pub:
-        teaser += "<figure>"
-        teaser += f"<img src=\"/images/{pub['teaser']}\" alt=\"image\">"
-        if "teaser_caption" in pub:
-            teaser += f"<figcaption align = \"center\">{pub['teaser_caption']}</figcaption>"
-            del pub["teaser_caption"]
-        teaser += "</figure>\n"
-        del pub["teaser"]
+    # teaser = ""
+    # if "teaser" in pub:
+    #     teaser += "<figure>"
+    #     teaser += f"<img src=\"/images/{pub['teaser']}\" alt=\"image\">"
+    #     if "teaser_caption" in pub:
+    #         teaser += f"<figcaption align = \"center\">{pub['teaser_caption']}</figcaption>"
+    #         del pub["teaser_caption"]
+    #     teaser += "</figure>\n"
+    #     del pub["teaser"]
 
     ## YAML variables
     md = f"---\n{gen_header(pub)}\n---\n"
 
-    md += "\n" + teaser
+    # md += "\n" + teaser
 
-    with open("pubs/" + filename, 'r') as template:
-        md += template.read()
+    if os.path.isfile("pubs/" + filename):
+        with open("pubs/" + filename, 'r') as template:
+            md += template.read()
+    else:
+        print(f"markdown file pubs/{filename} not found.")
 
     filename = os.path.basename(filename)
        

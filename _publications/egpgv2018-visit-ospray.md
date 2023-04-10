@@ -5,13 +5,13 @@ authors: "Qi Wu, Will Usher, Steve Petruzza, Sidharth Kumar, Feng Wang, Ingo Wal
 preprint_url: "https://drive.google.com/file/d/1ulrP4ogjIoxCR2A_oE9afemqhyK04lLA/view?usp=sharing"
 official_url: "https://dl.acm.org/doi/10.5555/3293524.3293526"
 preview: "pubs/egpgv2018-visit-ospray.png"
+teaser: "pubs/egpgv2018-visit-ospray-teaser.png"
+teaser_caption: "Figure 1: High-quality interactive volume visualization using VisIt-OSPRay: a) volume rendering of O2 concentration inside a combustion chamber; b) volume rendering of the Richtmyer-Meshkov Instability; c) visualization of a supernova simulation; d) visualization of the aneurysm dataset using volume rendering and streamlines; e) scalable volume rendering of the 966GB DNS data on 64 Stampede2 Intel® Xeon Phi™ Knight’s Landing nodes."
 bibtex: "@inproceedings{wu2018visit,\n    author = {Wu, Qi and Usher, Will and Petruzza, Steve and Kumar, Sidharth and Wang, Feng and Wald, Ingo and Pascucci, Valerio and Hansen, Charles D.},\n    title = {{VisIt-OSPRay}: Toward an Exascale Volume Visualization System},\n    year = {2018},\n    publisher = {Eurographics Association},\n    address = {Goslar, DEU},\n    booktitle = {Proceedings of the Symposium on Parallel Graphics and Visualization},\n    pages = {13–24},\n    numpages = {12},\n    location = {Brno, Czech Republic},\n    series = {EGPGV '18}\n}"
 permalink: "/publication/egpgv2018-visit-ospray"
 date: 2018-06-04
 collection: "publications"
 ---
-
-<figure><img src="/images/pubs/egpgv2018-visit-ospray-teaser.png" alt="image"><figcaption align = "center">Figure 1: High-quality interactive volume visualization using VisIt-OSPRay: a) volume rendering of O2 concentration inside a combustion chamber; b) volume rendering of the Richtmyer-Meshkov Instability; c) visualization of a supernova simulation; d) visualization of the aneurysm dataset using volume rendering and streamlines; e) scalable volume rendering of the 966GB DNS data on 64 Stampede2 Intel® Xeon Phi™ Knight’s Landing nodes.</figcaption></figure>
 
 <!-- 
 <figure>
