@@ -8,7 +8,6 @@ redirect_from:
   - /about.html
 ---
 
-I am a PhD in the Visualization & Interface Design Innovation Lab at the the University of California - Davis, USA. Prior to my PhD, I obtained a computer graphicsmaster degree from University of Utah and a physics bachelor from Hong Kong University of Science and Technology.
+I am a PhD student in the Visualization & Interface Design Innovation Lab at the the University of California - Davis, USA. Prior to my PhD study, I obtained a computer graphics master degree from the University of Utah and a physics bachelor degree from the Hong Kong University of Science and Technology.
 
-My research is focused on advancing software-defined, machine-learning-augmented visualization techniques to tackle complex, large-scale scientific problems. Specifically, I design hardware-accelerated parallel algorithms that facilitate realistic visualizations of scientific data. I create innovative methods for efficiently managing large-scale data and distributed data by integrating neural network representations. I also develop expressive and intelligent systems that optimize and automate scientific visualization and analysis processes, ultimately paving the way for more streamlined workflows and fostering scientific breakthroughs.
-
+My research is focused on advancing software-defined, machine-learning-augmented visualization techniques to support complex, large-scale scientific applications. Specifically, I design hardware-accelerated parallel algorithms that facilitate realistic visualization of scientific data and create innovative methods for efficiently managing large-scale, distributed data.  I also develop expressive and intelligent systems that optimize and automate scientific visualization and analysis processes, ultimately paving the way for more streamlined workflows and fostering scientific breakthroughs.
