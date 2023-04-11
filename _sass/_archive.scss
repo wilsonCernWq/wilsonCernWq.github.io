@@ -43,7 +43,8 @@
   p {
     margin-bottom: 0;
   }
-  margin-bottom: 1rem;
+  margin: 0;
+  padding: 0.25rem;
 }
 
 .archive__item-title {
@@ -86,13 +87,13 @@
 }
 
 .archive__item:hover {
-  .archive__item-teaser {
-    box-shadow: 0 0 10px rgba(#000, 0.25);
-  }
-
-  .archive__item-title {
-    text-decoration: underline;
-  }
+  box-shadow: 0 0 10px rgba(#000, 0.05);
+  // .archive__item-teaser {
+  //   box-shadow: 0 0 10px rgba(#000, 0.25);
+  // }
+  // .archive__item-title {
+  //   text-decoration: underline;
+  // }
 }
 
 
