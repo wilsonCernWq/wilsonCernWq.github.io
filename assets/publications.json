@@ -13,7 +13,7 @@
     "data": [
         {
             "title": "HyperINR: A Fast and Predictive Hypernetwork for Implicit Neural Representations via Knowledge Distillation",
-            "venue": "Submitted for Publication",
+            "venue": "@arxiv",
             "authors": "Qi Wu, David Bauer, Yuyang Chen, and Kwan Liu Ma",
             "abstract": "Implicit Neural Representations (INRs) have recently exhibited immense potential in the field of scientific visualization for both data generation and visualization tasks. However, these representations often consist of large multi-layer perceptrons (MLPs), necessitating millions of operations for a single forward pass, consequently hindering interactive visual exploration. While reducing the size of the MLPs and employing efficient parametric encoding schemes can alleviate this issue, it compromises generalizability for unseen parameters, rendering it unsuitable for tasks such as temporal super-resolution. In this paper, we introduce HyperINR, a novel hypernetwork architecture capable of directly predicting the weights for a compact INR. By harnessing an ensemble of multiresolution hash encoding units in unison, the resulting INR attains state-of-the-art inference performance (up to 100x higher inference bandwidth) and can support interactive photo-realistic volume visualization. Additionally, by incorporating knowledge distillation, exceptional data and visualization generation quality is achieved, making our method valuable for real-time parameter exploration. We validate the effectiveness of the HyperINR architecture through a comprehensive ablation study. We showcase the versatility of HyperINR across three distinct scientific domains: novel view synthesis, temporal super-resolution of volume data, and volume rendering with dynamic global shadows. By simultaneously achieving efficiency and generalizability, HyperINR paves the way for applying INR in a wider array of scientific visualization applications.",
             "preprint_url": "https://drive.google.com/file/d/1CY2WSxNTNXOap0vDW4euh4S6xJQf8UE7/view?usp=share_link",
@@ -54,7 +54,7 @@
         },
         {
             "title": "Distributed Neural Representation for Reactive in situ Visualization",
-            "venue": "Submitted for Publication",
+            "venue": "@arxiv",
             "authors": "Qi Wu, Joseph A. Insley, Victor A. Mateevitsi, Silvio Rizzi, Michael E. Papka, and Kwan Liu Ma",
             "abstract": "In situ visualization and steering of computational modeling can be effectively achieved using reactive programming, which leverages temporal abstraction and data caching mechanisms to create dynamic workflows. However, implementing a temporal cache for large-scale simulations can be challenging. Implicit neural networks have proven effective in compressing large volume data. However, their application to distributed data has yet to be fully explored. In this work, we develop an implicit neural representation for distributed volume data and incorporate it into the DIVA reactive programming system. This implementation enables us to build an in situ temporal caching system with a capacity 100 times larger than previously achieved. We integrate our implementation into the Ascent infrastructure and evaluate its performance using real-world simulations.",
             "preprint_url": "https://drive.google.com/file/d/1F2vJHvjoqXfhkIe4Glj6EcSNSQNx1pd7/view?usp=share_link",
@@ -94,7 +94,7 @@
         },
         {
             "title": "Instant Neural Representation for Interactive Volume Rendering and Volume Compression",
-            "venue": "Submitted for Publication",
+            "venue": "@arxiv",
             "authors": "Qi Wu, David Bauer, Michael J. Doyle, and Kwan-Liu Ma",
             "abstract": "Neural networks have shown great potential in compressing volume data for visualization. However, due to the high cost of training and inference, such volumetric neural representations have thus far only been applied to offline data processing and non-interactive rendering. In this paper, we demonstrate that by simultaneously leveraging modern GPU tensor cores, a native CUDA neural network framework, and a well-designed rendering algorithm with macro-cell acceleration, we can interactively ray trace volumetric neural representations (10-60fps). Our neural representations are also high-fidelity (PSNR > 30dB) and compact (10-1000x smaller). Additionally, we show that it is possible to fit the entire training step inside a rendering loop and skip the pre-training process completely. To support extreme-scale volume data, we also develop an efficient out-of-core training strategy, which allows our volumetric neural representation training to potentially scale up to terascale using only an NVIDIA RTX 3090 workstation.",
             "preprint_url": "https://drive.google.com/file/d/1IyXgzGw7EpHWAsakZoHsE8aU9RqdjHyg/view?usp=sharing",
