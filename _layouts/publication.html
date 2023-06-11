@@ -59,14 +59,41 @@ layout: default
           </figure>
         {% endif %}
 
+        <p>
+          {% if page.preprint_url %}
+            <a class="mr-2 text-decoration-none" href="{{ page.preprint_url }}">
+              <i class="far fa-file-pdf" aria-hidden="true"></i> PDF &nbsp;
+            </a>
+          {% endif %}
+
+          {% if page.arxiv_url %}
+            <a class="mr-2 text-decoration-none" href="{{ page.arxiv_url }}">
+              <i class="fas fa-external-link-alt" aria-hidden="true"></i> ArXiv Version &nbsp;
+            </a>
+          {% endif %}
+
+          {% if page.official_url %}
+            <a class="mr-2 text-decoration-none" href="{{ page.official_url }}">
+              <i class="fas fa-external-link-alt" aria-hidden="true"></i> Publisher's Version &nbsp;
+            </a>
+          {% endif %}
+
+          {% if page.code %}
+            <a class="mr-2 text-decoration-none" href="{{ page.code }}">
+              <i class="fa-brands fa-github" aria-hidden="true"></i> Code &nbsp;
+            </a>
+          {% endif %}
+        </p>
+
         {% if page.abstract %}
           <h3 id="abstract">Abstract</h3>
           <p>{{ page.abstract }}</p>
         {% endif %}
 
         {{ content }}
-        
+
         {% if page.bibtex %}
+          <h3 id="bibtex">BibTex</h3>
           <div class="language-plaintext highlighter-rouge">
             <!-- <div class="highlight"> -->
               <pre class="highlight"><code>{{page.bibtex}}</code></pre>

@@ -10,6 +10,7 @@ teaser: "pubs/tvcg2023-instant-vnr-teaser.png"
 teaser_caption: "Figure 1: A) An overview of our work. The sampling step randomly and uniformly generates sample using the ground truth (GT) data. The ground truth data can be loaded via out-of-core streaming. The training step optimizes the neural network. The rendering step renders the neural network via in-shader or sample-streaming methods. Our approach accommodates both pre-training and online-training. Our novel contributions are highlighted in yellow. B) The architecture of our neural network with the multi-resolution hash grid encoding method."
 bibtex: "@article{wu2022instant,\n    title={Instant Neural Representation for Interactive Volume Rendering},\n    author={Wu, Qi and Doyle, Michael J and Bauer, David and Ma, Kwan-Liu},\n    journal={arXiv preprint arXiv:2207.11620},\n    year={2022}\n}"
 permalink: "/publication/tvcg2023-instant-vnr"
+code: "https://github.com/VIDILabs/instantvnr"
 date: 2022-10-24
 collection: "publications"
 ---

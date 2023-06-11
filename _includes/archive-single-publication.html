@@ -69,6 +69,12 @@
           </a>
         {% endif %}
 
+        {% if post.code %}
+          <a class="mr-2 text-decoration-none" href="{{ post.code }}">
+            <i class="fa-brands fa-github" aria-hidden="true"></i> Code &nbsp;
+          </a>
+        {% endif %}
+
         <!-- {% if post.bibtex %}
           <a class="mr-2 text-decoration-none" href="javascript:void(0);" data-clipboard-text="{{ post.bibtex }}"
             data-toggle="popover"
