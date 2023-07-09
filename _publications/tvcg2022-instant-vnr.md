@@ -12,7 +12,7 @@ teaser_caption: "Figure 1: A) An overview of our work. The sampling step randoml
 bibtex: "@article{wu2022instant,\n    author={Wu, Qi and Bauer, David and Doyle, Michael J. and Ma, Kwan-Liu},\n    journal={IEEE Transactions on Visualization and Computer Graphics}, \n    title={Interactive Volume Visualization Via Multi-Resolution Hash Encoding Based Neural Representation}, \n    year={2023},\n    volume={},\n    number={},\n    pages={1-14},\n    doi={10.1109/TVCG.2023.3293121}\n}"
 permalink: "/publication/tvcg2022-instant-vnr"
 code: "https://github.com/VIDILabs/instantvnr"
-date: 2022-10-24
+date: 2023-6-28
 collection: "publications"
 ---
 <!-- ![image](/images/pubs/tvcg-instant-vnr-teaser.png) -->
