@@ -6,7 +6,11 @@
 <figcaption align = "center">Figure 1: A) An overview of our work. The sampling step randomly and uniformly generates sample using the ground truth (GT) data. The ground truth data can be loaded via out-of-core streaming. The training step optimizes the neural network. The rendering step renders the neural network via in-shader or sample-streaming methods. Our approach accommodates both pre-training and online-training. Our novel contributions are highlighted in yellow. B) The architecture of our neural network with the multi-resolution hash grid encoding method.</figcaption>
 </figure> -->
 
-<iframe width="420" height="315" src="https://drive.google.com/file/d/17wSgIm_VsoeGhfyZwMpOnCYy2Mj3ydGv/view?usp=sharing" frameborder="0" allowfullscreen></iframe>
+### Video
+
+<p>
+<iframe src="https://drive.google.com/file/d/17wSgIm_VsoeGhfyZwMpOnCYy2Mj3ydGv/preview" width="960" height="540" allow="autoplay"></iframe>
+</p>
 
 ### Note
 
