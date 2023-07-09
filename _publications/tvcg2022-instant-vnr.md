@@ -8,7 +8,7 @@ arxiv_url: "https://arxiv.org/abs/2207.11620"
 preview: "pubs/tvcg2022-instant-vnr.png"
 teaser: "pubs/tvcg2022-instant-vnr-teaser.png"
 teaser_caption: "Figure 1: A) An overview of our work. The sampling step randomly and uniformly generates sample using the ground truth (GT) data. The ground truth data can be loaded via out-of-core streaming. The training step optimizes the neural network. The rendering step renders the neural network via in-shader or sample-streaming methods. Our approach accommodates both pre-training and online-training. Our novel contributions are highlighted in yellow. B) The architecture of our neural network with the multi-resolution hash grid encoding method."
-bibtex: "@article{wu2022instant,\n    title={Instant Neural Representation for Interactive Volume Rendering},\n    author={Wu, Qi and Doyle, Michael J and Bauer, David and Ma, Kwan-Liu},\n    journal={arXiv preprint arXiv:2207.11620},\n    year={2022}\n}"
+bibtex: "@article{wu2022instant,\n    author={Wu, Qi and Bauer, David and Doyle, Michael J. and Ma, Kwan-Liu},\n    journal={IEEE Transactions on Visualization and Computer Graphics}, \n    title={Interactive Volume Visualization Via Multi-Resolution Hash Encoding Based Neural Representation}, \n    year={2023},\n    volume={},\n    number={},\n    pages={1-14},\n    doi={10.1109/TVCG.2023.3293121}\n}"
 permalink: "/publication/tvcg2022-instant-vnr"
 code: "https://github.com/VIDILabs/instantvnr"
 date: 2022-10-24
@@ -22,7 +22,7 @@ collection: "publications"
 <figcaption align = "center">Figure 1: A) An overview of our work. The sampling step randomly and uniformly generates sample using the ground truth (GT) data. The ground truth data can be loaded via out-of-core streaming. The training step optimizes the neural network. The rendering step renders the neural network via in-shader or sample-streaming methods. Our approach accommodates both pre-training and online-training. Our novel contributions are highlighted in yellow. B) The architecture of our neural network with the multi-resolution hash grid encoding method.</figcaption>
 </figure> -->
 
-### Video 
+### Video
 
 <p>
 <iframe src="https://drive.google.com/file/d/17wSgIm_VsoeGhfyZwMpOnCYy2Mj3ydGv/preview" width="960" height="540" allow="autoplay"></iframe>
