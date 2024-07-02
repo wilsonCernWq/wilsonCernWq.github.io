@@ -81,12 +81,12 @@ analytics:
 author:
   name             : "Qi Wu"
   avatar           : "profile.png"
-  bio              : "PhD candidate doing rendering and visualization research"
-  location         : "UC - Davis"
+  bio              : "Applied Research Scientist at NVIDIA"
+  location         : "US - Santa Clara"
   employer         : # "https://vidi.cs.ucdavis.edu" 
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=I2hvxPUAAAAJ&hl=en"
-  email            : "qadwu@ucdavis.edu"
+  email            : "qiwu@nvidia.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
