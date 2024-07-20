@@ -3,7 +3,7 @@ title: "Memory-Efficient GPU Volume Path Tracing of AMR Data Using the Dual Mesh
 venue: "The Eurographics Conference on Visualization (EuroVis)"
 authors: "Stefan Zellmann, Qi Wu, Kwan-Liu Ma, and Ingo Wald"
 abstract: "A common way to render cell-centric adaptive mesh refinement (AMR) data is to compute the dual mesh and visualize that with a standard unstructured element renderer. While the dual mesh provides a high-quality interpolator, the memory requirements of the dual mesh data structure are significantly higher than those of the original grid, which prevents rendering very large data sets. We introduce a GPU-friendly data structure and a clustering algorithm that allow for efficient AMR dual mesh rendering with a competitive memory footprint. Fundamentally, any off-the-shelf unstructured element renderer running on GPUs could be extended to support our data structure just by adding a gridlet element type in addition to the standard tetrahedra, pyramids, wedges, and hexahedra supported by default. We integrated the data structure into a volumetric path tracer to compare it to various state-of-the-art unstructured element sampling methods. We show that our data structure easily competes with these method in terms of rendering performance, but is much more memory-efficient."
-preprint_url: "https://drive.google.com/file/d/1oW1ZMzcH_Yxh7ST7gMfreQqTFrhlpmWo/view?usp=share_link"
+preprint_url: "https://drive.google.com/file/d/1oW1ZMzcH_Yxh7ST7gMfreQqTFrhlpmWo/view?usp=sharing"
 arxiv_url: "https://arxiv.org/abs/2211.09997"
 official_url: "https://diglib.eg.org/handle/10.1111/cgf14811"
 preview: "pubs/eurovis2023-stitcher.png"

@@ -10,10 +10,7 @@ main:
   #   url: /year-archive/
     
   - title: "CV"
-    url: /assets/OriginalENG-Academic.pdf
-
-  - title: "简历"
-    url: /assets/OriginalCHN-Academic.pdf
+    url: /assets/CV.pdf
 
   # - title: "Talks"
   #   url: /talks/    
