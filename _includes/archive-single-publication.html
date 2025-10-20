@@ -28,6 +28,8 @@
   {% assign venue = post.venue %}
 {% endif %}
 
+{% assign authors = post.authors | replace: "Qi Wu", "<b>Qi Wu</b>" %}
+
 <div class="{{ include.type | default: 'list' }}__item">
   <article class="archive__item mb-2" itemscope itemtype="http://schema.org/CreativeWork">
 
@@ -44,7 +46,7 @@
         </h6>
 
         <p class="archive__item-content fs-6">
-          {{ post.authors }}
+          {{ authors }}
           <br/>
           <i>{{ venue }}</i>, 
           {% if post.award %}
@@ -84,6 +86,12 @@
         {% if post.code %}
           <a class="mr-2 text-decoration-none" href="{{ post.code }}">
             <i class="fa-brands fa-github" aria-hidden="true"></i> Code &nbsp;
+          </a>
+        {% endif %}
+
+        {% if post.blog %}
+          <a class="mr-2 text-decoration-none" href="{{ post.blog }}">
+            <i class="fas fa-external-link-alt" aria-hidden="true"></i> Blog &nbsp;
           </a>
         {% endif %}
 
