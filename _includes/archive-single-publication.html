@@ -13,11 +13,19 @@
   {% assign preview = preview | prepend: "/images/" | prepend: base_path %}
 {% endif %}
 
-<!-- not sure what is this for now -->
-{% if post.id %}
+<!-- {% if post.id %}
   {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
 {% else %}
   {% assign title = post.title %}
+{% endif %} -->
+
+{% assign title = post.title | remove: "<br>" | markdownify %}
+
+{% if post.venue contains "@" %}
+  {% assign venue_key = post.venue | split: "@" | last %}
+  {% assign venue = site.data.venues[venue_key].name %}
+{% else %}
+  {% assign venue = post.venue %}
 {% endif %}
 
 <div class="{{ include.type | default: 'list' }}__item">
@@ -38,14 +46,18 @@
         <p class="archive__item-content fs-6">
           {{ post.authors }}
           <br/>
-          <i>{{ post.venue }}</i>, 
+          <i>{{ venue }}</i>, 
           {% if post.award %}
             <b style="color:coral">{{ post.award }}</b>,
           {% endif %}
           {{ post.date | default: "1900-01-01" | date: "%Y" }} 
         </p>
 
-        {% if post.url %}
+        {% if post.project_page %}
+          <a class="mr-2 text-decoration-none" href="{{ post.project_page }}">
+            <i class="far fa-file-alt" aria-hidden="true"></i> Project Page &nbsp;
+          </a>
+        {% else %}
           <a class="mr-2 text-decoration-none" href="{{ base_path }}{{ post.url }}">
             <i class="far fa-file-alt" aria-hidden="true"></i> Project Page &nbsp;
           </a>

@@ -1,0 +1,26 @@
+CVPR:
+  name: "Conference on Computer Vision and Pattern Recognition (CVPR)"
+
+TVCG: 
+  name: "IEEE Transactions on Visualization and Computer Graphics (TVCG)"
+
+VIS": 
+  name: "IEEE Visualization Conference (VIS)"
+
+VIS_tutorial: 
+  name: "IEEE Visualization Conference (VIS) Tutorial"
+
+EGPGV: 
+  name: "The Eurographics Symposium on Parallel Graphics and Visualization (EGPGV)"
+
+LDAV: 
+  name: "IEEE Symposium on Large Data Analysis and Visualization (LDAV)"
+
+LDAV_poster: 
+  name: "IEEE Symposium on Large Data Analysis and Visualization (LDAV) Poster"
+
+EuroVis: 
+  name: "The Eurographics Conference on Visualization (EuroVis)"
+
+arxiv: 
+  name: "ArXiv Preprint"
