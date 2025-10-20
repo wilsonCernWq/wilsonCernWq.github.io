@@ -1,7 +1,7 @@
 ---
 title: "Distributed Neural Representation for Reactive in situ Visualization"
 venue: "@TVCG"
-authors: "Qi Wu, Joseph A. Insley, Victor A. Mateevitsi, Silvio Rizzi, Michael E. Papka, and Kwan Liu Ma"
+authors: "Qi Wu, Joseph Insley, Victor Mateevitsi, Silvio Rizzi, Michael Papka, and Kwan-Liu Ma"
 preprint_url: "https://drive.google.com/file/d/1F2vJHvjoqXfhkIe4Glj6EcSNSQNx1pd7/view?usp=sharing"
 official_url: "https://ieeexplore.ieee.org/document/10631163"
 arxiv_url: "https://arxiv.org/abs/2304.10516"
@@ -9,7 +9,7 @@ preview: "pubs/tvcg2023-dvnr-reactive.png"
 date: 2024-07-20
 collection: "publications"
 teaser: "pubs/tvcg2023-dvnr-reactive-teaser.png"
-teaser_caption: "Figure 1: We compared the rendering of our distributed neural representations using varying numbers of training steps. The data was distributed to two MPI ranks and trained using two NVIDIA A100-40G GPUs on the ALCF Polaris supercomputer. Partition boundaries were highlighted using white lines in A) and B). C) are zoomed views of A) near partition boundaries. In 1C), an obvious discontinuity is visible at the partition boundary. With more training steps in 2), the discontinuity becomes less obvious, but high frequency noises are still visible. However, in 3), with sufficient training steps, these artifacts are no longer visible. We used flow field data generated from the S3D simulation for this experiment."
+teaser_caption: "We compared the rendering of our distributed neural representations using varying numbers of training steps. The data was distributed to two MPI ranks and trained using two NVIDIA A100-40G GPUs on the ALCF Polaris supercomputer. Partition boundaries were highlighted using white lines in A) and B). C) are zoomed views of A) near partition boundaries. In 1C), an obvious discontinuity is visible at the partition boundary. With more training steps in 2), the discontinuity becomes less obvious, but high frequency noises are still visible. However, in 3), with sufficient training steps, these artifacts are no longer visible. We used flow field data generated from the S3D simulation for this experiment."
 ---
 
 ### Abstract

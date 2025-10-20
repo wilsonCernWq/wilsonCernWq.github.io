@@ -1,7 +1,7 @@
 ---
 title: "HyperINR: A Fast and Predictive Hypernetwork for Implicit Neural Representations via Knowledge Distillation"
-venue: "arxiv"
-authors: "Qi Wu, David Bauer, Yuyang Chen, and Kwan Liu Ma"
+venue: "@arxiv"
+authors: "Qi Wu, David Bauer, Yuyang Chen, and Kwan-Liu Ma"
 preprint_url: "https://drive.google.com/file/d/1CY2WSxNTNXOap0vDW4euh4S6xJQf8UE7/view?usp=sharing"
 arxiv_url: "https://arxiv.org/abs/2304.04188"
 preview: "pubs/arxiv-hyperinr.png"

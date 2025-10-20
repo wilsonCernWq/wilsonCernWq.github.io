@@ -8,6 +8,7 @@ arxiv_url: "https://arxiv.org/abs/2504.18001"
 preview: "pubs/egpgv2025-cinr.png"
 date: 2025-04-13
 collection: "publications"
+code: "https://github.com/VIDILabs/cINR"
 teaser: "pubs/egpgv2025-cinr-teaser.png"
 teaser_caption: "Image quality comparison of our multi-resolution pipeline with Wu et al.'s single resolution INR pipeline as our ground truth. The leftmost column of each comparison depicts pixel differences visually using FLIP, lighter is better. Additionally, we calculate PSNR, MSSIM, and LPIPs quality metrics based on both rendered images for each dataset. Results show that our cached pipeline maintains decent reconstruction quality while achieving the performance results."
 ---
