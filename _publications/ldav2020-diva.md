@@ -15,6 +15,12 @@ collection: "publications"
 
 The use of adaptive workflow management for in situ visualization and analysis has been a growing trend in large-scale scientific simulations. However, coordinating adaptive workflows with traditional procedural programming languages can be difficult because system flow is determined by unpredictable scientific phenomena, which often appear in an unknown order and can evade event handling. This makes the implementation of adaptive workflows tedious and error-prone. Recently, reactive and declarative programming paradigms have been recognized as well-suited solutions to similar problems in other domains. However, there is a dearth of research on adapting these approaches to in situ visualization and analysis. With this paper, we present a language design and runtime system for developing adaptive systems through a declarative and reactive programming paradigm. We illustrate how an adaptive workflow programming system is implemented using our approach and demonstrate it with a use case from a combustion simulation.
 
+### Presentation
+
+<p>
+<iframe src="https://drive.google.com/file/d/1BGlRIn7rt6gWRKLj7oNaRyGfUMQblnQM/preview" width="960" height="540" allow="autoplay"></iframe>
+</p>
+
 ### BibTex
 
 ```bibtex

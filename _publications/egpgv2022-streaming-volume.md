@@ -14,6 +14,12 @@ collection: "publications"
 ### Abstract
 Modern simulations and experiments can produce massive amounts of high-fidelity data that are challenging to transport and visualize interactively. We have designed a data streaming system to support interactive visualization of large volume data. Our streaming system design is unique in its flexibility to support diverse data organizations and its coupling with a highly efficient CPU-based ray-tracing renderer. In this paper, we present our streaming and rendering design and demonstrate the efficacy of our system with progressive rendering of streaming tree-based AMR (TAMR) volume data and radial basis function (RBF) particle volume data. With our system, interactive visualization can be achieved using only a mid-range workstation with a single CPU and a modest quantity of RAM.
 
+### Supplementary Video
+
+<p>
+<iframe src="https://drive.google.com/file/d/1bKMKPJ7mxvMesXRk0yne2w7FhT7lV7Gt/preview" width="960" height="540" allow="autoplay"></iframe>
+</p>
+
 ### BibTex
 
 ```bibtex
