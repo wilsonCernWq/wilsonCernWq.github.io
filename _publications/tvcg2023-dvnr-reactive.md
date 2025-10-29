@@ -16,6 +16,12 @@ teaser_caption: "We compared the rendering of our distributed neural representat
 
 In situ visualization and steering of computational modeling can be effectively achieved using reactive programming, which leverages temporal abstraction and data caching mechanisms to create dynamic workflows. However, implementing a temporal cache for large-scale simulations can be challenging. Implicit neural networks have proven effective in compressing large volume data. However, their application to distributed data has yet to be fully explored. In this work, we develop an implicit neural representation for distributed volume data and incorporate it into the DIVA reactive programming system. This implementation enables us to build an in situ temporal caching system with a capacity 100 times larger than previously achieved. We integrate our implementation into the Ascent infrastructure and evaluate its performance using real-world simulations.
 
+### Presentation
+
+<p>
+<iframe src="https://drive.google.com/file/d/1clJN0yPShuz5vpQQ36E3Fd3wC2nygOVd/preview" width="960" height="540" allow="autoplay"></iframe>
+</p>
+
 ### BibTex
 
 ```bibtex
