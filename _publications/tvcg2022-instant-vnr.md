@@ -1,6 +1,6 @@
 ---
 title: "Interactive Volume Visualization via Multi-Resolution Hash Encoding based Neural Representation"
-venue: "IEEE Transactions on Visualization and Computer Graphics (TVCG)"
+venue: "@TVCG"
 authors: "Qi Wu, David Bauer, Michael J. Doyle, and Kwan-Liu Ma"
 preprint_url: "https://drive.google.com/file/d/1IyXgzGw7EpHWAsakZoHsE8aU9RqdjHyg/view?usp=sharing"
 arxiv_url: "https://arxiv.org/abs/2207.11620"

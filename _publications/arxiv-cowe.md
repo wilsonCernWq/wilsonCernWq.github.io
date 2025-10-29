@@ -2,7 +2,6 @@
 title: "Glyph-Based Multiscale Visualization of Turbulent Multi-Physics Statistics"
 venue: "@arxiv"
 authors: "Arisa Cowe, Tyson Neuroth, Qi Wu, Martin Rieth, Jacqueline Chen, Myoungkyu Lee, and Kwan-Liu Ma"
-official_url: "https://onlinelibrary.wiley.com/doi/full/10.1111/cgf.70134"
 arxiv_url: "https://arxiv.org/abs/2506.23092"
 preview: "pubs/arxiv-cowe.png"
 date: 2025-06-29
@@ -13,8 +12,7 @@ teaser_caption: "Figure 1. Fields $X_i$ are input to the scale decomposition, an
 ---
 
 ### Abstract
-We present HyperFLINT (Hypernetwork-based FLow estimation and temporal INTerpolation), a novel deep learning-based approach for estimating flow fields, temporally interpolating scalar fields, and facilitating parameter space exploration in spatio-temporal scientific ensemble data. This work addresses the critical need to explicitly incorporate ensemble parameters into the learning process, as traditional methods often neglect these, limiting their ability to adapt to diverse simulation settings and provide meaningful insights into the data dynamics. HyperFLINT introduces a hypernetwork to account for simulation parameters, enabling it to generate accurate interpolations and flow fields for each timestep by dynamically adapting to varying conditions, thereby outperforming existing parameter-agnostic approaches. The architecture features modular neural blocks with convolutional and deconvolutional layers, supported by a hypernetwork that generates weights for the main network, allowing the model to better capture intricate simulation dynamics. A series of experiments demonstrates HyperFLINT's significantly improved performance in flow field estimation and temporal interpolation, as well as its potential in enabling parameter space exploration, offering valuable insights into complex scientific ensembles.
-
+Many scientific and engineering problems involving multi-physics span a wide range of scales. Understanding the interactions across these scales is essential for fully comprehending such complex problems. However, visualizing multivariate, multiscale data within an integrated view where correlations across space, scales, and fields are easily perceived remains challenging. To address this, we introduce a novel local spatial statistical visualization of flow fields across multiple fields and turbulence scales. Our method leverages the curvelet transform for scale decomposition of fields of interest, a level-set-restricted centroidal Voronoi tessellation to partition the spatial domain into local regions for statistical aggregation, and a set of glyph designs that combines information across scales and fields into a single, or reduced set of perceivable visual representations. Each glyph represents data aggregated within a Voronoi region and is positioned at the Voronoi site for direct visualization in a 3D view centered around flow features of interest. We implement and integrate our method into an interactive visualization system where the glyph-based technique operates in tandem with linked 3D spatial views and 2D statistical views, supporting a holistic analysis. We demonstrate with case studies visualizing turbulent combustion data--multi-scalar compressible flows--and turbulent incompressible channel flow data. This new capability enables scientists to better understand the interactions between multiple fields and length scales in turbulent flows.
 
 <figure>
 <img src="/images/pubs/arxiv-cowe-figure.png" alt="image">
@@ -26,19 +24,3 @@ We present HyperFLINT (Hypernetwork-based FLow estimation and temporal INTerpola
 <figcaption align = "center">Figure 8. Radial glyph rendering with 3 scale bins for temperature in the combustion data. Left zoom: glyphs are configured to show temperature and hydroxyl radical (OH) together (left side and right side of glyph respectively). In some areas, the balance of scale contributions is very similar between the fields, while in other areas we see a major difference, e.g., the purple area where the medium scales are very dominant for OH compared to temperature. The zoomed-in regions are sized to give a sense of what the visualization might look like fully zoomed out on a high-resolution monitor. While the visibility of the glyphs from afar can be limited depending on the coarseness and size of the glyphs, patterns can still be perceived throughout and zoomed in on to see more precise
 detail.</figcaption>
 </figure>
-
-### BibTex
-```bibtex
-@article{gadirov2025hyperflint,
-    author = {Gadirov, Hamid and Wu, Qi and Bauer, David and Ma, Kwan-Liu and Roerdink, Jos B.T.M. and Frey, Steffen},
-    title = {HyperFLINT: Hypernetwork-based Flow Estimation and Temporal Interpolation for Scientific Ensemble Visualization},
-    journal = {Computer Graphics Forum},
-    volume = {44},
-    number = {3},
-    pages = {e70134},
-    doi = {https://doi.org/10.1111/cgf.70134},
-    url = {https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.70134},
-    eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1111/cgf.70134},
-    year = {2025}
-}
-```
