@@ -21,7 +21,7 @@ Large-scale simulations can easily produce data in excess of what can be efficie
 ```bibtex
 @inproceedings{wu2018visit,
     author = {Wu, Qi and Usher, Will and Petruzza, Steve and Kumar, Sidharth and Wang, Feng and Wald, Ingo and Pascucci, Valerio and Hansen, Charles D.},
-    title = {{VisIt-OSPRay}: Toward an Exascale Volume Visualization System},
+    title = {VisIt-OSPRay: Toward an Exascale Volume Visualization System},
     year = {2018},
     publisher = {Eurographics Association},
     address = {Goslar, DEU},

@@ -22,7 +22,7 @@ A common way to render cell-centric adaptive mesh refinement (AMR) data is to co
 ```bibtex
 @article{zellmann2023memory,
     journal = {Computer Graphics Forum},
-    title = {{Memory-Efficient GPU Volume Path Tracing of AMR Data Using the Dual Mesh}},
+    title = {Memory-Efficient GPU Volume Path Tracing of AMR Data Using the Dual Mesh},
     author = {Zellmann, Stefan and Wu, Qi and Ma, Kwan-Liu and Wald, Ingo},
     year = {2023},
     publisher = {The Eurographics Association and John Wiley & Sons Ltd.},

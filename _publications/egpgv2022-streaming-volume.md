@@ -20,7 +20,7 @@ Modern simulations and experiments can produce massive amounts of high-fidelity 
 @inproceedings{wu2022flexible,
     booktitle = {Eurographics Symposium on Parallel Graphics and Visualization},
     editor = {Bujack, Roxana and Tierny, Julien and Sadlo, Filip},
-    title = {{A Flexible Data Streaming Design for Interactive Visualization of Large-Scale Volume Data}},
+    title = {A Flexible Data Streaming Design for Interactive Visualization of Large-Scale Volume Data},
     author = {Wu, Qi and Doyle, Michael J. and Ma, Kwan-Liu},
     year = {2022},
     publisher = {The Eurographics Association},

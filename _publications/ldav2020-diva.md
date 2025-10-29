@@ -19,7 +19,7 @@ The use of adaptive workflow management for in situ visualization and analysis h
 
 ```bibtex
 @inproceedings{wu2020diva,
-    title={{DIVA}: A Declarative and Reactive Language for in situ Visualization},
+    title={DIVA: A Declarative and Reactive Language for in situ Visualization},
     author={Wu, Qi and Neuroth, Tyson and Igouchkine, Oleg and Aditya, Konduri and Chen, Jacqueline H and Ma, Kwan-Liu},
     booktitle={2020 IEEE 10th Symposium on Large Data Analysis and Visualization (LDAV)},
     pages={1--11},
