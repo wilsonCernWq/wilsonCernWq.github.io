@@ -81,9 +81,9 @@ analytics:
 author:
   name             : "Qi Wu"
   avatar           : "profile.png"
-  bio              : "Applied Research Scientist at NVIDIA"
+  bio              : "Sr. Research Scientist at NVIDIA"
   location         : "US"
-  employer         : # "https://vidi.cs.ucdavis.edu" 
+  employer         : "https://research.nvidia.com/labs/sil" 
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=I2hvxPUAAAAJ&hl=en"
   email            : "qiwu@nvidia.com"
