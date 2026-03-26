@@ -25,5 +25,8 @@ EuroVis:
 CGF:
   name: "Computer Graphics Forum (CGF)"
 
+ICLR:
+  name: "International Conference on Learning Representations (ICLR)"
+
 arxiv: 
   name: "ArXiv Preprint"
