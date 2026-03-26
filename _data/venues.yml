@@ -22,5 +22,8 @@ LDAV_poster:
 EuroVis: 
   name: "The Eurographics Conference on Visualization (EuroVis)"
 
+CGF:
+  name: "Computer Graphics Forum (CGF)"
+
 arxiv: 
   name: "ArXiv Preprint"
