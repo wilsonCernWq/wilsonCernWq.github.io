@@ -1,18 +1,42 @@
-A Github Pages template for academic websites. This was forked from the [AcademicPages Jekyll Theme](https://github.com/academicpages/academicpages.github.io/), which is released under the MIT License. See LICENSE.md.
+# Qi Wu — academic homepage
 
-# Instructions
+A GitHub Pages site for an academic profile and publications. This repository is based on the [AcademicPages Jekyll theme](https://github.com/academicpages/academicpages.github.io/) (MIT License). See `LICENSE.md`.
 
-See more info at https://academicpages.github.io/
+## Documentation
 
-## To run locally (not on GitHub Pages, to serve on your own computer)
+| Document | Contents |
+|----------|----------|
+| **[DEV.md](DEV.md)** | Project structure, configuration, how to add publications, venues, images, BibTeX copy button, and local development |
+| [AcademicPages docs](https://academicpages.github.io/) | Upstream template behavior and markdown generator scripts |
 
-1. Clone the repository and made updates as detailed above
-1. Make sure you have ruby-dev, bundler, and nodejs installed: `sudo apt install ruby-dev ruby-bundler nodejs`
-1. Run `bundle clean` to clean up the directory (no need to run `--force`)
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-1. Run `bundle exec jekyll serve --livereload` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
-1. Run `bundle exec jekyll serve`
+## Run the site locally
 
-## Markdown Generator
+Prerequisites: **Ruby 3.1.x** (or another version compatible with the `github-pages` gem), **Bundler**, and **Git**. This project uses GitHub Pages’ gem stack; Ruby 4.x is not supported by that stack.
 
-There are python files in `scripts/` that convert a TSV containing structured data about talks (`talks.tsv`) or presentations (`presentations.tsv`) into individual markdown files that will be properly formatted for the academicpages template. The notebooks contain a lot of documentation about the process. The .py files are pure python that do the same things if they are executed in a terminal, they just don't have pretty documentation.
+```bash
+cd /path/to/this/repo
+bundle install
+bundle exec jekyll serve
+```
+
+Then open `http://127.0.0.1:4000/`. For live reload, use:
+
+```bash
+bundle exec jekyll serve --livereload
+```
+
+**macOS (Homebrew):** Install Ruby 3.1 with `brew install ruby@3.1` and put it on your `PATH` before `bundle install`. See [DEV.md](DEV.md#local-development-quick-reference) for details.
+
+**Linux (apt):** The upstream template often suggests `sudo apt install ruby-dev ruby-bundler nodejs`; adjust for your distribution.
+
+If `bundle install` fails, see `Gemfile.lock` and try `bundle update` or regenerate the lockfile only after reading GitHub Pages’ [dependency versions](https://pages.github.com/versions/).
+
+## Markdown / TSV generators
+
+The `scripts/` folder contains utilities that convert TSV files (e.g. `talks.tsv`, `presentations.tsv`) into Markdown for the template. See the notebooks and comments in the AcademicPages repository for how to run them.
+
+## Adding a publication
+
+**Short version:** Add a new Markdown file under `_publications/`, set front matter (`title`, `venue`, `authors`, `date`, `preview`, …), add images under `images/pubs/` if needed, and optionally use `project_page` to link out instead of hosting the full page.
+
+**Full checklist and field reference:** [DEV.md — Adding a new publication](DEV.md#adding-a-new-publication).
