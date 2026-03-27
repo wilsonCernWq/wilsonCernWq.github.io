@@ -1,0 +1,89 @@
+/* ==========================================================================
+   BibTeX Copy to Clipboard Functionality
+   ========================================================================== */
+
+/* BibTeX container wrapper */
+.bibtex-container {
+  position: relative;
+}
+
+/* Copy button styling - follows theme patterns */
+.bibtex-copy-btn {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  background: $code-background-color;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  padding: 2px 4px;
+  font-size: $type-size-8;
+  font-family: $global-font-family;
+  cursor: pointer;
+  transition: $global-transition;
+  z-index: 10;
+  color: $text-color;
+
+  &:hover {
+    background: $lighter-gray;
+    border-color: $light-gray;
+    color: $dark-gray;
+  }
+
+  &.copied {
+    background: $success-color;
+    border-color: mix(#000, $success-color, 20%);
+    color: #fff;
+  }
+
+  i {
+    margin-right: 0.25em;
+  }
+}
+
+/* BibTeX code block styling - uses theme variables */
+.bibtex-container .highlighter-rouge {
+  .highlight {
+    font-family: $monospace;
+    font-size: $type-size-7;
+  }
+}
+
+.bibtex-container pre code,
+.bibtex-container .highlight code {
+  font-size: $type-size-7;
+}
+
+/* Handle standalone code blocks */
+.bibtex-container > code {
+  display: block;
+  padding: 1em;
+  background: $code-background-color;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  overflow-x: auto;
+  white-space: pre;
+  font-family: $monospace;
+  font-size: $type-size-7;
+  box-shadow: $box-shadow;
+}
+
+/* Dark theme support */
+@media (prefers-color-scheme: dark) {
+  .bibtex-copy-btn {
+    background: $code-background-color-dark;
+    border-color: $dark-gray;
+    color: $lighter-gray;
+    
+    &:hover {
+      background: $gray;
+      border-color: $light-gray;
+      color: #fff;
+    }
+    
+    &.copied {
+      background: $success-color;
+      border-color: mix(#000, $success-color, 20%);
+      color: #fff;
+    }
+  }
+}

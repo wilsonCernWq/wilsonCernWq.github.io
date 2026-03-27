@@ -8,8 +8,8 @@ preview: "pubs/eurovis2025-hyperflint.png"
 date: 2025-05-23
 collection: "publications"
 # optional teaser
-# teaser: "pubs/arxiv-hyperinr-teaser.png"
-# teaser_caption: "Figure 1: Comparisons between HyperINR and data interpolation for the temporal super-resolution task using the vortices dataset. Listed timesteps are midpoints of different interpolation intervals. HyperINR can directly predict the weights of a regular implicit neural representation (INR) for unseen parameters. The predicted INR is in general more accurate than data interpolation results and can support interactive volumetric path tracing."
+teaser: "pubs/eurovis2025-hyperflint-arch.png"
+teaser_caption: "Figure 1: HyperFLINT network architecture and pipeline during training."
 ---
 
 ### Abstract
