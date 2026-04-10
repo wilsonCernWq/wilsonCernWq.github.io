@@ -6,7 +6,7 @@ preprint_url: "https://research.nvidia.com/labs/sil/projects/simuli/assets/paper
 arxiv_url: "https://arxiv.org/abs/2510.12901"
 official_url: ""
 preview: "pubs/iclr2026-simuli.png"
-date: 2026-05-01
+date: 2026-03-01
 collection: "publications"
 project_page: "https://research.nvidia.com/labs/sil/projects/simuli"
 ---
