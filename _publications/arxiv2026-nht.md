@@ -1,6 +1,6 @@
 ---
 title: "Neural Harmonic Textures for High-Quality Primitive Based Neural Reconstruction"
-venue: "@arxiv"
+venue: "@ECCV"
 authors: "Jorge Condor, Nicolas Moenne-Loccoz, Merlin Nimier-David, Piotr Didyk, Zan Gojcic, and Qi Wu"
 arxiv_url: "https://arxiv.org/abs/2604.01204"
 code: "https://github.com/nv-tlabs/neural-harmonic-textures"

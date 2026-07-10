@@ -28,5 +28,8 @@ CGF:
 ICLR:
   name: "International Conference on Learning Representations (ICLR)"
 
+ECCV:
+  name: "European Conference on Computer Vision (ECCV)"
+
 arxiv: 
   name: "ArXiv Preprint"
