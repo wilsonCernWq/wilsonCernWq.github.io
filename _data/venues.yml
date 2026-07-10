@@ -32,7 +32,7 @@ ECCV:
   name: "European Conference on Computer Vision (ECCV)"
 
 PACMCGIT:
-  name: "Proceedings of the ACM on Computer Graphics and Interactive Techniques (PACMCGIT)"
+  name: "ACM Computer Graphics and Interactive Techniques"
 
 arxiv: 
   name: "ArXiv Preprint"
