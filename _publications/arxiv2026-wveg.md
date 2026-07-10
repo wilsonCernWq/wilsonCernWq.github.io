@@ -11,7 +11,7 @@ preprint_url: "https://arxiv.org/pdf/2607.01164"
 arxiv_url: "https://arxiv.org/abs/2607.01164"
 preview: "pubs/arxiv2026-wveg.jpg"
 teaser: "pubs/arxiv2026-wveg-teaser.jpg"
-teaser_width: "80%"
+teaser_width: "60%"
 teaser_alt: "Ground-truth and W-VEG reconstructions of the Impact volume at 1024x compression"
 teaser_caption: "Volume rendering of the 17.9 GB unstructured Impact dataset and its 17.5 MB W-VEG+S reconstruction. At 1024x compression, the model retains 38.43 dB PSNR and 0.984 SSIM while storing both the scalar field and its domain."
 project_page_style: true
@@ -40,7 +40,7 @@ collection: "publications"
   </div>
 </div>
 
-<figure class="project-figure" style="--figure-width:80%;">
+<figure class="project-figure" style="--figure-width:60%;">
   <img src="/images/pubs/arxiv2026-wveg-impact-reconstruction.jpg" alt="W-VEG reconstruction of the unstructured Impact dataset" loading="lazy">
   <figcaption>The Impact reconstruction sampled from a 17.5 MB W-VEG+S model. The original unstructured volume occupies 17.9 GB.</figcaption>
 </figure>
@@ -55,7 +55,7 @@ A structured volume stores values on a regular grid, so its domain is implicit i
 
 For the datasets in this study, that surface alone limits effective compression to roughly 7-24x, regardless of how small the learned scalar model becomes. W-VEG+S instead uses the support of its learned Gaussians to encode the valid domain, allowing the model to answer both questions at once: *is this position defined, and what is its scalar value?*
 
-<figure class="project-figure" style="--figure-width:72%;">
+<figure class="project-figure" style="--figure-width:60%;">
   <img src="/images/pubs/arxiv2026-wveg-volume-types.png" alt="Comparison of sampling on regular structured grids and irregular unstructured volume domains" loading="lazy">
   <figcaption>Structured volumes have an implicit regular domain. Unstructured volumes require an explicit geometry and may be undefined at arbitrary query positions.</figcaption>
 </figure>

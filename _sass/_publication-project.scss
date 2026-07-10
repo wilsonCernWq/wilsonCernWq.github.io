@@ -296,6 +296,40 @@
     color: #3f4d55;
     font-size: 0.9rem;
   }
+
+  .project-image-grid {
+    display: grid;
+    width: 100%;
+    flex: 0 0 100%;
+    gap: 0.8rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .project-image-grid__item {
+    min-width: 0;
+  }
+
+  .project-image-grid__item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 4px;
+  }
+
+  .project-image-grid__item span {
+    display: block;
+    margin-top: 0.45rem;
+    color: var(--project-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .project-image-grid + figcaption {
+    margin-top: 0.9rem;
+  }
 }
 
 .publication-project .project-figure {
@@ -328,7 +362,8 @@
     .project-metrics,
     .project-steps,
     .project-parameter-grid,
-    .project-scope {
+    .project-scope,
+    .project-image-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
