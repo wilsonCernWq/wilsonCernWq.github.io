@@ -2,7 +2,7 @@
 title: "Glyph-Based Multiscale Visualization of Turbulent Multi-Physics Statistics"
 venue: "@CGF"
 authors: "Arisa Cowe, Tyson Neuroth, Qi Wu, Martin Rieth, Jacqueline Chen, Myoungkyu Lee, and Kwan-Liu Ma"
-preprint_url: "https://arxiv.org/abs/2506.23092"
+arxiv_url: "https://arxiv.org/abs/2506.23092"
 official_url: "https://doi.org/10.1111/cgf.70399"
 preview: "pubs/cgf2026-cowe.png"
 teaser: "pubs/cgf2026-cowe-teaser.png"
