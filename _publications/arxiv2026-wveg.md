@@ -9,6 +9,7 @@ abstract: >-
 excerpt: "W-VEG compresses structured and unstructured volumes into directly queryable 3D Gaussians, including the domain geometry needed to remove exterior mesh storage."
 preprint_url: "https://arxiv.org/pdf/2607.01164"
 arxiv_url: "https://arxiv.org/abs/2607.01164"
+code: "https://github.com/schakrabarti-lanl/gaussian-volume-compression"
 preview: "pubs/arxiv2026-wveg.jpg"
 teaser: "pubs/arxiv2026-wveg-teaser.jpg"
 teaser_width: "60%"
