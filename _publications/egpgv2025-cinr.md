@@ -1,6 +1,7 @@
 ---
 title: "From Cluster to Desktop: A Cache-Accelerated INR framework for Interactive Visualization <br> of Tera-Scale Data"
 venue: "@EGPGV"
+award: "Best Paper Honorable Mentions"
 authors: "Daniel Zavorotny, Qi Wu, David Bauer, and Kwan-Liu Ma"
 preprint_url: "https://drive.google.com/file/d/1-cVZCaNBp7RAuNmVWQGBnx4huYS5Ekqj/view?usp=sharing"
 official_url: "https://diglib.eg.org/items/d04e0485-4347-4ea5-9950-aa9a6967a732"
