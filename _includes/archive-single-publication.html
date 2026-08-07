@@ -35,8 +35,10 @@
 
     <div class="row col-12">
 
-      <div class=".archive__item-teaser col-6 col-md-2 float-md-left">
-        <img src="{{ preview }}" alt="">
+      <div class="publication-preview-column col-6 col-md-2 float-md-left">
+        <div class="archive__item-teaser publication-preview">
+          <img src="{{ preview }}" alt="{{ post.title | strip_html | escape }}">
+        </div>
       </div>
 
       <div class="col-12 col-md-10 text-md-left">
